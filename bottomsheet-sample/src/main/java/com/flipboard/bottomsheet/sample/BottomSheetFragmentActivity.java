@@ -33,7 +33,7 @@ public final class BottomSheetFragmentActivity extends AppCompatActivity {
             myFragment.dismiss();
         bottomSheetLayout.setShouldDimContentView(false);
         bottomSheetLayout.setPeekOnDismiss(true);
-        bottomSheetLayout.setPeekSheetTranslation(200);
+        bottomSheetLayout.setPeekSheetTranslation(getResources().getDimensionPixelSize(R.dimen.detail_backdrop_height));
         bottomSheetLayout.setInterceptContentTouch(false);
     }
 }

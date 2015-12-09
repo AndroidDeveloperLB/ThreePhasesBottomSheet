@@ -19,6 +19,11 @@
         <item name="colorPrimary">#673AB7</item>
         <item name="colorPrimaryDark">#512DA8</item>
         <item name="colorAccent">#FF4081</item>
-        <!--<item name="android:windowBackground">@color/window_background</item>-->
+    </style>
+
+    <style name="ToolbarColoredBackArrow" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:colorControlNormal">#f00</item>
+        <item name="colorControlNormal">#f00</item>
+
     </style>
 </resources>
