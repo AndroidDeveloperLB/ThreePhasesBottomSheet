@@ -41,11 +41,14 @@ public class MyFragment extends BottomSheetFragment {
         });
         final ImageView imageView = (ImageView) view.findViewById(R.id.backdrop);
         Glide.with(this).load(R.drawable.cheese_1).centerCrop().into(imageView);
-        mBottomSheetLayout.setAppBarLayout((AppBarLayout) view.findViewById(R.id.appbar));
+        if (mBottomSheetLayout != null)
+            mBottomSheetLayout.setAppBarLayout((AppBarLayout) view.findViewById(R.id.appbar));
         return view;
     }
 
     public void setBottomSheetLayout(final BottomSheetLayout bottomSheetLayout) {
         mBottomSheetLayout = bottomSheetLayout;
+        if (mBottomSheetLayout != null&&getView()!=null)
+            mBottomSheetLayout.setAppBarLayout((AppBarLayout) getView().findViewById(R.id.appbar));
     }
 }

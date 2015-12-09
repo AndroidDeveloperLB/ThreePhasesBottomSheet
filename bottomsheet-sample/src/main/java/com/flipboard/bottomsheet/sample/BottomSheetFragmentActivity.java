@@ -28,6 +28,9 @@ public final class BottomSheetFragmentActivity extends AppCompatActivity {
                 myFragment.show(getSupportFragmentManager(), R.id.bottomsheet);
             }
         });
+        final MyFragment myFragment = (MyFragment) getSupportFragmentManager().findFragmentByTag(Integer.toString(R.id.bottomsheet));
+        if (myFragment != null)
+            myFragment.dismiss();
         bottomSheetLayout.setShouldDimContentView(false);
         bottomSheetLayout.setPeekOnDismiss(true);
         bottomSheetLayout.setPeekSheetTranslation(200);
