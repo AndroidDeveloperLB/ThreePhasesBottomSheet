@@ -1,19 +1,6 @@
 <resources>
     <string name="app_name">BottomSheet Sample</string>
-    <string name="share">Share</string>
-    <string name="list_button">List</string>
-    <string name="grid_button">Grid</string>
-    <string name="intent_picker">Intent Picker</string>
-    <string name="menu_resource">Inflating a Menu</string>
-    <string name="document">Document</string>
-    <string name="spreadsheet">Spreadsheet</string>
-    <string name="folder">Folder</string>
-    <string name="upload_photos">Upload photos or videos</string>
-    <string name="use_camera">Use camera</string>
-    <string name="share_some_text">Share some text!</string>
-    <string name="image_picker">Image picker</string>
     <string name="show">Show</string>
-    <string name="reopen">Reopen as other type</string>
     <string name="bottomsheet_fragment">BottomSheet Fragment</string>
     <string name="cheese_ipsum">Jarlsberg lancashire edam. Dolcelatte hard cheese brie st. agur blue     cheese caerphilly bavarian bergkase cheese and biscuits mascarpone. Cheeseburger swiss bavarian     bergkase cream cheese fromage frais cheesy feet port-salut airedale. St. agur blue cheese rubber     cheese caerphilly cheddar cheesecake cream cheese manchego lancashire. Roquefort squirty cheese     the big cheese.</string>
 </resources>
