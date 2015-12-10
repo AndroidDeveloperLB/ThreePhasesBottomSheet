@@ -54,11 +54,7 @@ public class MyFragment extends BottomSheetFragment {
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //if (NavUtils.getParentActivityIntent(getActivity()) != null)
-                //    NavUtils.navigateUpFromSameTask(getActivity());
-                //else getActivity().onBackPressed();
-                if (mToolbar.getAlpha() == 1)
-                    mBottomSheetLayout.dismissSheet();
+                mBottomSheetLayout.dismissSheet();
             }
         });
         mToolbar.setAlpha(0);
@@ -128,7 +124,9 @@ public class MyFragment extends BottomSheetFragment {
                         mToolbarAnimation.cancel();
                     mToolbarAnimation = null;
                     mToolbar.setAlpha(0);
+                    mToolbar.setVisibility(View.GONE);
                 } else if (mToolbarAnimation == null) {
+                    mToolbar.setVisibility(View.VISIBLE);
                     mToolbar.setTranslationY(-mToolbar.getHeight() / 3);
                     mToolbarAnimation = mToolbar.animate().setDuration(getResources().getInteger(android.R.integer.config_longAnimTime));
                     mToolbarAnimation.alpha(1).translationY(0).start();
