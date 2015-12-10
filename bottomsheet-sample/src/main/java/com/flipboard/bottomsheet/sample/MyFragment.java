@@ -75,6 +75,7 @@ public class MyFragment extends BottomSheetFragment {
 
             @Override
             public void onOffsetChanged(final AppBarLayout appBarLayout, final int verticalOffset) {
+                Log.d("AppLog", "onOffsetChanged");
                 if (mBottomSheetLayout != null && mBottomSheetLayout.isSheetShowing() && mBottomSheetLayout.getState() == State.EXPANDED) {
                     float progress = (float) -verticalOffset / mAppBarLayout.getTotalScrollRange();
                     movingIconImageView.setX(mMStartMarginLeft + (progress * (actionBarHeight - mMStartMarginLeft)));
@@ -124,7 +125,7 @@ public class MyFragment extends BottomSheetFragment {
                         mToolbarAnimation.cancel();
                     mToolbarAnimation = null;
                     mToolbar.setAlpha(0);
-                    mToolbar.setVisibility(View.GONE);
+                    mToolbar.setVisibility(View.INVISIBLE);
                 } else if (mToolbarAnimation == null) {
                     mToolbar.setVisibility(View.VISIBLE);
                     mToolbar.setTranslationY(-mToolbar.getHeight() / 3);
@@ -148,7 +149,6 @@ public class MyFragment extends BottomSheetFragment {
                     mOriginalContactPhotoXCoordinate = movingIconImageView.getX();
                 if (translation < mBottomSheetHeight)
                     return;
-                Log.d("AppLog", "translation:" + translation + " mBottomSheetHeight:" + mBottomSheetHeight);
                 if (translation == mBottomSheetHeight) {
                     if (mBottomSheetBackgroundImageViewFadeInAnimation != null)
                         mBottomSheetBackgroundImageViewFadeInAnimation.cancel();
@@ -164,12 +164,13 @@ public class MyFragment extends BottomSheetFragment {
                     }
                 }
                 float progress = (translation - mBottomSheetHeight) / (maxTranslation - mBottomSheetHeight);
+                //Log.d("AppLog", "translation:" + translation + " maxTranslation:" + maxTranslation + " progress:" + progress);
+
                 //movingIconImageView.setY(progress * (mBottomSheetHeight - movingIconImageView.getHeight()));
                 movingIconImageView.setY(progress * (mBottomSheetHeight - movingIconImageView.getHeight() - mMStartMarginBottom));
                 movingIconImageView.setX(mOriginalContactPhotoXCoordinate - progress * (mOriginalContactPhotoXCoordinate - mMStartMarginLeft));
                 //mBottomSheetBackgroundImageView.setAlpha(progress);
                 mBottomSheetBackgroundImageView.setTranslationY(mOriginalBottomSheetBackgroundImageViewTranslationY - progress * mOriginalBottomSheetBackgroundImageViewTranslationY);
-                //Log.d("AppLog", "translation:" + translation + " maxTranslation:" + maxTranslation + " peekedTranslation:" + peekedTranslation + " progress:" + progress);
 
             }
         };
