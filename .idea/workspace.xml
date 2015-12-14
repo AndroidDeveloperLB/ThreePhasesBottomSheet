@@ -14,9 +14,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af0812f4-c5a4-401e-ab75-aec60b6ed4bb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bottomsheet-sample/src/main/java/com/flipboard/bottomsheet/sample/MyFragment.java" afterPath="$PROJECT_DIR$/bottomsheet-sample/src/main/java/com/flipboard/bottomsheet/sample/MyFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bottomsheet/src/main/java/com/flipboard/bottomsheet/BottomSheetLayout.java" afterPath="$PROJECT_DIR$/bottomsheet/src/main/java/com/flipboard/bottomsheet/BottomSheetLayout.java" />
     </list>
     <ignored path="ThreePhasesBottomSheet.iws" />
@@ -48,8 +46,8 @@
       <file leaf-file-name="BottomSheetLayout.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bottomsheet/src/main/java/com/flipboard/bottomsheet/BottomSheetLayout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334">
-              <caret line="528" column="28" selection-start-line="528" selection-start-column="28" selection-end-line="528" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.67582417">
+              <caret line="700" column="110" selection-start-line="700" selection-start-column="110" selection-end-line="700" selection-end-column="110" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1313#1339#0" expanded="true" />
@@ -102,40 +100,40 @@
                 <element signature="docComment;method#showWithSheetView#1;class#BottomSheetLayout#0" expanded="true" />
                 <element signature="e#25146#25323#0" expanded="true" />
                 <element signature="e#25322#25323#0" expanded="true" />
-                <element signature="e#26757#28020#0" expanded="true" />
-                <element signature="e#26953#27965#0" expanded="true" />
-                <element signature="e#27479#27897#0" expanded="true" />
-                <element signature="e#27896#27897#0" expanded="true" />
-                <element signature="e#27964#27965#0" expanded="true" />
-                <element signature="e#28019#28020#0" expanded="true" />
-                <element signature="e#28205#28948#0" expanded="true" />
-                <element signature="e#28947#28948#0" expanded="true" />
+                <element signature="e#26757#29593#0" expanded="true" />
+                <element signature="e#27125#29348#0" expanded="true" />
+                <element signature="e#28035#29054#0" expanded="true" />
+                <element signature="e#29053#29054#0" expanded="true" />
+                <element signature="e#29347#29348#0" expanded="true" />
+                <element signature="e#29592#29593#0" expanded="true" />
+                <element signature="e#29788#30699#0" expanded="true" />
+                <element signature="e#30698#30699#0" expanded="true" />
                 <element signature="docComment;method#dismissSheet#0;class#BottomSheetLayout#0" expanded="true" />
-                <element signature="e#29134#29135#0" expanded="true" />
-                <element signature="e#29168#29169#0" expanded="true" />
-                <element signature="e#29948#30938#0" expanded="true" />
-                <element signature="e#30937#30938#0" expanded="true" />
+                <element signature="e#30896#30897#0" expanded="true" />
+                <element signature="e#30930#30931#0" expanded="true" />
+                <element signature="e#31710#32700#0" expanded="true" />
+                <element signature="e#32699#32700#0" expanded="true" />
                 <element signature="docComment;method#setPeekOnDismiss#0;class#BottomSheetLayout#0" expanded="true" />
-                <element signature="e#31395#31396#0" expanded="true" />
-                <element signature="e#31445#31446#0" expanded="true" />
+                <element signature="e#33157#33158#0" expanded="true" />
+                <element signature="e#33207#33208#0" expanded="true" />
                 <element signature="docComment;method#getPeekOnDismiss#0;class#BottomSheetLayout#0" expanded="true" />
-                <element signature="e#31714#31715#0" expanded="true" />
-                <element signature="e#31750#31751#0" expanded="true" />
+                <element signature="e#33476#33477#0" expanded="true" />
+                <element signature="e#33512#33513#0" expanded="true" />
                 <element signature="docComment;method#setInterceptContentTouch#0;class#BottomSheetLayout#0" expanded="true" />
                 <element signature="docComment;method#getInterceptContentTouch#0;class#BottomSheetLayout#0" expanded="true" />
-                <element signature="e#32407#32408#0" expanded="true" />
-                <element signature="e#32451#32452#0" expanded="true" />
+                <element signature="e#34169#34170#0" expanded="true" />
+                <element signature="e#34213#34214#0" expanded="true" />
                 <element signature="docComment;method#getState#0;class#BottomSheetLayout#0" expanded="true" />
-                <element signature="e#32545#32546#0" expanded="true" />
-                <element signature="e#32573#32574#0" expanded="true" />
+                <element signature="e#34307#34308#0" expanded="true" />
+                <element signature="e#34335#34336#0" expanded="true" />
                 <element signature="docComment;method#isSheetShowing#0;class#BottomSheetLayout#0" expanded="true" />
-                <element signature="e#32690#32691#0" expanded="true" />
-                <element signature="e#32734#32735#0" expanded="true" />
+                <element signature="e#34452#34453#0" expanded="true" />
+                <element signature="e#34496#34497#0" expanded="true" />
                 <element signature="docComment;method#setDefaultViewTransformer#0;class#BottomSheetLayout#0" expanded="true" />
                 <element signature="docComment;method#setShouldDimContentView#0;class#BottomSheetLayout#0" expanded="true" />
                 <element signature="docComment;method#shouldDimContentView#0;class#BottomSheetLayout#0" expanded="true" />
-                <element signature="e#34030#34031#0" expanded="true" />
-                <element signature="e#34073#34074#0" expanded="true" />
+                <element signature="e#35792#35793#0" expanded="true" />
+                <element signature="e#35835#35836#0" expanded="true" />
                 <element signature="docComment;method#setUseHardwareLayerWhileAnimating#0;class#BottomSheetLayout#0" expanded="true" />
                 <element signature="docComment;method#addOnSheetStateChangeListener#0;class#BottomSheetLayout#0" expanded="true" />
                 <element signature="docComment;method#addOnSheetDismissedListener#0;class#BottomSheetLayout#0" expanded="true" />
@@ -143,7 +141,7 @@
                 <element signature="docComment;method#removeOnSheetDismissedListener#0;class#BottomSheetLayout#0" expanded="true" />
                 <element signature="docComment;method#isTablet#0;class#BottomSheetLayout#0" expanded="true" />
                 <element signature="docComment;method#predictedDefaultWidth#0;class#BottomSheetLayout#0" expanded="true" />
-                <element signature="e#37311#37396#0" expanded="true" />
+                <element signature="e#39073#39158#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -3801,7 +3799,7 @@
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../AndroidSlidingUpPanel" />
     <property name="FullScreen" value="false" />
-    <property name="device.picker.selection" value="006350230c90c785" />
+    <property name="device.picker.selection" value="04d4406f55ef4ae1" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -4145,7 +4143,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/bottomsheet/src/main/java/com/flipboard/bottomsheet/BottomSheetLayout.java</url>
-          <line>722</line>
+          <line>733</line>
           <properties />
           <option name="timeStamp" value="53" />
         </line-breakpoint>
@@ -4626,8 +4624,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bottomsheet/src/main/java/com/flipboard/bottomsheet/BottomSheetLayout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="528" column="28" selection-start-line="528" selection-start-column="28" selection-end-line="528" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.67582417">
+          <caret line="700" column="110" selection-start-line="700" selection-start-column="110" selection-end-line="700" selection-end-column="110" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1313#1339#0" expanded="true" />
@@ -4680,40 +4678,40 @@
             <element signature="docComment;method#showWithSheetView#1;class#BottomSheetLayout#0" expanded="true" />
             <element signature="e#25146#25323#0" expanded="true" />
             <element signature="e#25322#25323#0" expanded="true" />
-            <element signature="e#26757#28020#0" expanded="true" />
-            <element signature="e#26953#27965#0" expanded="true" />
-            <element signature="e#27479#27897#0" expanded="true" />
-            <element signature="e#27896#27897#0" expanded="true" />
-            <element signature="e#27964#27965#0" expanded="true" />
-            <element signature="e#28019#28020#0" expanded="true" />
-            <element signature="e#28205#28948#0" expanded="true" />
-            <element signature="e#28947#28948#0" expanded="true" />
+            <element signature="e#26757#29593#0" expanded="true" />
+            <element signature="e#27125#29348#0" expanded="true" />
+            <element signature="e#28035#29054#0" expanded="true" />
+            <element signature="e#29053#29054#0" expanded="true" />
+            <element signature="e#29347#29348#0" expanded="true" />
+            <element signature="e#29592#29593#0" expanded="true" />
+            <element signature="e#29788#30699#0" expanded="true" />
+            <element signature="e#30698#30699#0" expanded="true" />
             <element signature="docComment;method#dismissSheet#0;class#BottomSheetLayout#0" expanded="true" />
-            <element signature="e#29134#29135#0" expanded="true" />
-            <element signature="e#29168#29169#0" expanded="true" />
-            <element signature="e#29948#30938#0" expanded="true" />
-            <element signature="e#30937#30938#0" expanded="true" />
+            <element signature="e#30896#30897#0" expanded="true" />
+            <element signature="e#30930#30931#0" expanded="true" />
+            <element signature="e#31710#32700#0" expanded="true" />
+            <element signature="e#32699#32700#0" expanded="true" />
             <element signature="docComment;method#setPeekOnDismiss#0;class#BottomSheetLayout#0" expanded="true" />
-            <element signature="e#31395#31396#0" expanded="true" />
-            <element signature="e#31445#31446#0" expanded="true" />
+            <element signature="e#33157#33158#0" expanded="true" />
+            <element signature="e#33207#33208#0" expanded="true" />
             <element signature="docComment;method#getPeekOnDismiss#0;class#BottomSheetLayout#0" expanded="true" />
-            <element signature="e#31714#31715#0" expanded="true" />
-            <element signature="e#31750#31751#0" expanded="true" />
+            <element signature="e#33476#33477#0" expanded="true" />
+            <element signature="e#33512#33513#0" expanded="true" />
             <element signature="docComment;method#setInterceptContentTouch#0;class#BottomSheetLayout#0" expanded="true" />
             <element signature="docComment;method#getInterceptContentTouch#0;class#BottomSheetLayout#0" expanded="true" />
-            <element signature="e#32407#32408#0" expanded="true" />
-            <element signature="e#32451#32452#0" expanded="true" />
+            <element signature="e#34169#34170#0" expanded="true" />
+            <element signature="e#34213#34214#0" expanded="true" />
             <element signature="docComment;method#getState#0;class#BottomSheetLayout#0" expanded="true" />
-            <element signature="e#32545#32546#0" expanded="true" />
-            <element signature="e#32573#32574#0" expanded="true" />
+            <element signature="e#34307#34308#0" expanded="true" />
+            <element signature="e#34335#34336#0" expanded="true" />
             <element signature="docComment;method#isSheetShowing#0;class#BottomSheetLayout#0" expanded="true" />
-            <element signature="e#32690#32691#0" expanded="true" />
-            <element signature="e#32734#32735#0" expanded="true" />
+            <element signature="e#34452#34453#0" expanded="true" />
+            <element signature="e#34496#34497#0" expanded="true" />
             <element signature="docComment;method#setDefaultViewTransformer#0;class#BottomSheetLayout#0" expanded="true" />
             <element signature="docComment;method#setShouldDimContentView#0;class#BottomSheetLayout#0" expanded="true" />
             <element signature="docComment;method#shouldDimContentView#0;class#BottomSheetLayout#0" expanded="true" />
-            <element signature="e#34030#34031#0" expanded="true" />
-            <element signature="e#34073#34074#0" expanded="true" />
+            <element signature="e#35792#35793#0" expanded="true" />
+            <element signature="e#35835#35836#0" expanded="true" />
             <element signature="docComment;method#setUseHardwareLayerWhileAnimating#0;class#BottomSheetLayout#0" expanded="true" />
             <element signature="docComment;method#addOnSheetStateChangeListener#0;class#BottomSheetLayout#0" expanded="true" />
             <element signature="docComment;method#addOnSheetDismissedListener#0;class#BottomSheetLayout#0" expanded="true" />
@@ -4721,7 +4719,7 @@
             <element signature="docComment;method#removeOnSheetDismissedListener#0;class#BottomSheetLayout#0" expanded="true" />
             <element signature="docComment;method#isTablet#0;class#BottomSheetLayout#0" expanded="true" />
             <element signature="docComment;method#predictedDefaultWidth#0;class#BottomSheetLayout#0" expanded="true" />
-            <element signature="e#37311#37396#0" expanded="true" />
+            <element signature="e#39073#39158#0" expanded="true" />
           </folding>
         </state>
       </provider>

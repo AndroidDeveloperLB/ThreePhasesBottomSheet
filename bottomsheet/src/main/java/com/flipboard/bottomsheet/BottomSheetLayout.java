@@ -683,54 +683,68 @@ public class BottomSheetLayout extends FrameLayout {
         // Don't start animating until the sheet has been drawn once. This ensures that we don't do layout while animating and that
         // the drawing cache for the view has been warmed up. tl;dr it reduces lag.
         getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
-            @Override
-            public boolean onPreDraw() {
-                getViewTreeObserver().removeOnPreDrawListener(this);
-                post(new Runnable() {
-                    @Override
-                    public void run() {
-                        // Make sure sheet view is still here when first draw happens.
-                        // In the case of a large lag it could be that the view is dismissed before it is drawn resulting in sheet view being null here.
-                        if (getSheetView() != null) {
-                            peekSheet();
-                            if (VERSION.SDK_INT < VERSION_CODES.M)
-                                post(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        if (getSheetView().getTranslationY() == 0)
-                                            getSheetView().setVisibility(View.VISIBLE);
-                                        else post(this);
-                                    }
-                                });
-                        }
-                    }
-                });
-                return true;
-            }
-        });
+                                                       @Override
+                                                       public boolean onPreDraw() {
+                                                           getViewTreeObserver().removeOnPreDrawListener(this);
+                                                           post(new Runnable() {
+                                                                    @Override
+                                                                    public void run() {
+                                                                        // Make sure sheet view is still here when first draw happens.
+                                                                        // In the case of a large lag it could be that the view is dismissed before it is drawn resulting in sheet view being null here.
+                                                                        if (getSheetView() != null) {
+                                                                            peekSheet();
+                                                                            if (VERSION.SDK_INT < VERSION_CODES.M)
+                                                                                post(new Runnable() {
+                                                                                         @Override
+                                                                                         public void run() {
+                                                                                             final View view = getSheetView();
+                                                                                             if (view != null)
+                                                                                                 if (view.getTranslationY() == 0)
+                                                                                                     view.setVisibility(View.VISIBLE);
+                                                                                                 else post(this);
+                                                                                         }
+                                                                                     }
+
+                                                                                );
+                                                                        }
+                                                                    }
+                                                                }
+
+                                                           );
+                                                           return true;
+                                                       }
+                                                   }
+
+        );
 
         // sheetView should always be anchored to the bottom of the screen
         currentSheetViewHeight = sheetView.getMeasuredHeight();
-        sheetViewOnLayoutChangeListener = new OnLayoutChangeListener() {
-            @Override
-            public void onLayoutChange(View sheetView, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
-                int newSheetViewHeight = sheetView.getMeasuredHeight();
-                if (state != State.HIDDEN && newSheetViewHeight < currentSheetViewHeight) {
-                    // The sheet can no longer be in the expanded state if it has shrunk
-                    if (state == State.EXPANDED) {
-                        setState(State.PEEKED);
+        sheetViewOnLayoutChangeListener = new
+
+                OnLayoutChangeListener() {
+                    @Override
+                    public void onLayoutChange(View sheetView, int left, int top, int right, int bottom,
+                                               int oldLeft, int oldTop, int oldRight, int oldBottom) {
+                        int newSheetViewHeight = sheetView.getMeasuredHeight();
+                        if (state != State.HIDDEN && newSheetViewHeight < currentSheetViewHeight) {
+                            // The sheet can no longer be in the expanded state if it has shrunk
+                            if (state == State.EXPANDED) {
+                                setState(State.PEEKED);
+                            }
+                            setSheetTranslation(newSheetViewHeight);
+                        }
+                        currentSheetViewHeight = newSheetViewHeight;
                     }
-                    setSheetTranslation(newSheetViewHeight);
                 }
-                currentSheetViewHeight = newSheetViewHeight;
-            }
-        };
+
+        ;
         sheetView.addOnLayoutChangeListener(sheetViewOnLayoutChangeListener);
     }
 
     /**
      * Dismiss the sheet currently being presented.
      */
+
     public void dismissSheet() {
         dismissSheet(null);
     }
