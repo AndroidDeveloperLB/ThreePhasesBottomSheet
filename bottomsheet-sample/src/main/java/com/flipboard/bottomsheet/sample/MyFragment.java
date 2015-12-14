@@ -7,7 +7,6 @@ import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.AppBarLayout.OnOffsetChangedListener;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -75,7 +74,6 @@ public class MyFragment extends BottomSheetFragment {
 
             @Override
             public void onOffsetChanged(final AppBarLayout appBarLayout, final int verticalOffset) {
-                Log.d("AppLog", "onOffsetChanged");
                 if (mBottomSheetLayout != null && mBottomSheetLayout.isSheetShowing() && mBottomSheetLayout.getState() == State.EXPANDED) {
                     float progress = (float) -verticalOffset / mAppBarLayout.getTotalScrollRange();
                     movingIconImageView.setX(mMStartMarginLeft + (progress * (actionBarHeight - mMStartMarginLeft)));

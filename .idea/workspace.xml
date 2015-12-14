@@ -14,8 +14,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af0812f4-c5a4-401e-ab75-aec60b6ed4bb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bottomsheet-sample/src/main/java/com/flipboard/bottomsheet/sample/MyFragment.java" afterPath="$PROJECT_DIR$/bottomsheet-sample/src/main/java/com/flipboard/bottomsheet/sample/MyFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bottomsheet-sample/src/main/java/com/flipboard/bottomsheet/sample/MyFragment.java" afterPath="$PROJECT_DIR$/bottomsheet-sample/src/main/java/com/flipboard/bottomsheet/sample/MyFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bottomsheet/src/main/java/com/flipboard/bottomsheet/BottomSheetLayout.java" afterPath="$PROJECT_DIR$/bottomsheet/src/main/java/com/flipboard/bottomsheet/BottomSheetLayout.java" />
     </list>
     <ignored path="ThreePhasesBottomSheet.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,60 +44,132 @@
     <favorites_list name="ThreePhasesBottomSheet" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="BottomSheetFragmentActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/java/com/flipboard/bottomsheet/sample/BottomSheetFragmentActivity.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="BottomSheetLayout.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bottomsheet/src/main/java/com/flipboard/bottomsheet/BottomSheetLayout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="41" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
-              <folding />
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="528" column="28" selection-start-line="528" selection-start-column="28" selection-end-line="528" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1313#1339#0" expanded="true" />
+                <element signature="e#1444#1445#0" expanded="true" />
+                <element signature="e#1498#1499#0" expanded="true" />
+                <element signature="docComment;class#CancelDetectionAnimationListener#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="e#2042#2043#0" expanded="true" />
+                <element signature="e#2081#2082#0" expanded="true" />
+                <element signature="docComment;field#screenWidth#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="e#4202#4279#0" expanded="true" />
+                <element signature="docComment;field#downY#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="docComment;field#downX#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="docComment;field#downSheetTranslation#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="docComment;field#downState#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="e#4960#4961#0" expanded="true" />
+                <element signature="e#4999#5000#0" expanded="true" />
+                <element signature="e#6137#6369#0" expanded="true" />
+                <element signature="e#6368#6369#0" expanded="true" />
+                <element signature="docComment;method#addView#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="e#6863#6864#0" expanded="true" />
+                <element signature="e#6893#6894#0" expanded="true" />
+                <element signature="e#7253#7254#0" expanded="true" />
+                <element signature="e#7283#7284#0" expanded="true" />
+                <element signature="e#19114#19115#0" expanded="true" />
+                <element signature="e#19184#19185#0" expanded="true" />
+                <element signature="e#19221#19222#0" expanded="true" />
+                <element signature="e#19267#19268#0" expanded="true" />
+                <element signature="docComment;method#initializeSheetValues#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="docComment;method#expandSheet#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="e#21514#21765#0" expanded="true" />
+                <element signature="e#21764#21765#0" expanded="true" />
+                <element signature="docComment;method#peekSheet#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="e#22286#22537#0" expanded="true" />
+                <element signature="e#22536#22537#0" expanded="true" />
+                <element signature="docComment;method#getPeekSheetTranslation#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="docComment;method#setPeekSheetTranslation#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="e#23188#23189#0" expanded="true" />
+                <element signature="e#23220#23221#0" expanded="true" />
+                <element signature="docComment;method#getMaxSheetTranslation#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="docComment;method#getContentView#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="e#23664#23665#0" expanded="true" />
+                <element signature="e#23729#23730#0" expanded="true" />
+                <element signature="docComment;method#getSheetView#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="e#23885#23886#0" expanded="true" />
+                <element signature="e#23950#23951#0" expanded="true" />
+                <element signature="docComment;method#setContentView#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="docComment;method#showWithSheetView#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="e#24597#24598#0" expanded="true" />
+                <element signature="e#24647#24648#0" expanded="true" />
+                <element signature="docComment;method#showWithSheetView#1;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="e#25146#25323#0" expanded="true" />
+                <element signature="e#25322#25323#0" expanded="true" />
+                <element signature="e#26757#28020#0" expanded="true" />
+                <element signature="e#26953#27965#0" expanded="true" />
+                <element signature="e#27479#27897#0" expanded="true" />
+                <element signature="e#27896#27897#0" expanded="true" />
+                <element signature="e#27964#27965#0" expanded="true" />
+                <element signature="e#28019#28020#0" expanded="true" />
+                <element signature="e#28205#28948#0" expanded="true" />
+                <element signature="e#28947#28948#0" expanded="true" />
+                <element signature="docComment;method#dismissSheet#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="e#29134#29135#0" expanded="true" />
+                <element signature="e#29168#29169#0" expanded="true" />
+                <element signature="e#29948#30938#0" expanded="true" />
+                <element signature="e#30937#30938#0" expanded="true" />
+                <element signature="docComment;method#setPeekOnDismiss#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="e#31395#31396#0" expanded="true" />
+                <element signature="e#31445#31446#0" expanded="true" />
+                <element signature="docComment;method#getPeekOnDismiss#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="e#31714#31715#0" expanded="true" />
+                <element signature="e#31750#31751#0" expanded="true" />
+                <element signature="docComment;method#setInterceptContentTouch#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="docComment;method#getInterceptContentTouch#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="e#32407#32408#0" expanded="true" />
+                <element signature="e#32451#32452#0" expanded="true" />
+                <element signature="docComment;method#getState#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="e#32545#32546#0" expanded="true" />
+                <element signature="e#32573#32574#0" expanded="true" />
+                <element signature="docComment;method#isSheetShowing#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="e#32690#32691#0" expanded="true" />
+                <element signature="e#32734#32735#0" expanded="true" />
+                <element signature="docComment;method#setDefaultViewTransformer#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="docComment;method#setShouldDimContentView#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="docComment;method#shouldDimContentView#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="e#34030#34031#0" expanded="true" />
+                <element signature="e#34073#34074#0" expanded="true" />
+                <element signature="docComment;method#setUseHardwareLayerWhileAnimating#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="docComment;method#addOnSheetStateChangeListener#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="docComment;method#addOnSheetDismissedListener#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="docComment;method#removeOnSheetStateChangeListener#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="docComment;method#removeOnSheetDismissedListener#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="docComment;method#isTablet#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="docComment;method#predictedDefaultWidth#0;class#BottomSheetLayout#0" expanded="true" />
+                <element signature="e#37311#37396#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyFragment.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/java/com/flipboard/bottomsheet/sample/MyFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56344414">
-              <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="38" column="52" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="docComment;method#getActionBarHeight#0;class#MyFragment#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dimens.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/values/dimens.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3877552">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fragment_my.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/layout/fragment_my.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.703704">
-              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-              <folding>
-                <element signature="e#480#502#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/values/colors.xml">
+      <file leaf-file-name="BottomSheetFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bottomsheet-commons/src/main/java/com/flipboard/bottomsheet/commons/BottomSheetFragment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="25" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="25" />
-              <folding />
+              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -3459,15 +3533,16 @@
         <option value="$PROJECT_DIR$/bottomsheet-sample/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/bottomsheet-sample/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/bottomsheet-sample/src/main/res/layout/activity_bottom_sheet_fragment.xml" />
-        <option value="$PROJECT_DIR$/bottomsheet-sample/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/bottomsheet-sample/src/main/res/layout/junk_cardview.xml" />
         <option value="$PROJECT_DIR$/bottomsheet-sample/src/main/java/com/flipboard/bottomsheet/sample/RoundedImageView.java" />
         <option value="$PROJECT_DIR$/bottomsheet-sample/src/main/java/com/flipboard/bottomsheet/sample/RoundedDrawable.java" />
         <option value="$PROJECT_DIR$/bottomsheet-sample/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/bottomsheet-sample/src/main/java/com/flipboard/bottomsheet/sample/BottomSheetFragmentActivity.java" />
+        <option value="$PROJECT_DIR$/bottomsheet-sample/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/bottomsheet-sample/src/main/res/layout/fragment_my.xml" />
         <option value="$PROJECT_DIR$/bottomsheet-sample/src/main/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/bottomsheet-sample/src/main/java/com/flipboard/bottomsheet/sample/BottomSheetFragmentActivity.java" />
         <option value="$PROJECT_DIR$/bottomsheet-sample/src/main/java/com/flipboard/bottomsheet/sample/MyFragment.java" />
+        <option value="$PROJECT_DIR$/bottomsheet/src/main/java/com/flipboard/bottomsheet/BottomSheetLayout.java" />
       </list>
     </option>
   </component>
@@ -3478,13 +3553,10 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="NamedScopeManager">
-    <order />
-  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
+    <option name="width" value="1924" />
     <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -3508,10 +3580,10 @@
       <autoscrollToSource />
       <autoscrollFromSource />
       <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -3532,6 +3604,64 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="bottomsheet-sample" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThreePhasesBottomSheet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bottomsheet-sample" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThreePhasesBottomSheet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bottomsheet-sample" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThreePhasesBottomSheet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bottomsheet-sample" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -3558,6 +3688,16 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="bottomsheet-sample" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThreePhasesBottomSheet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="bottomsheet-commons" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
@@ -3567,9 +3707,65 @@
               <option name="myItemId" value="ThreePhasesBottomSheet" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bottomsheet-commons" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commons" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThreePhasesBottomSheet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bottomsheet-commons" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThreePhasesBottomSheet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bottomsheet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThreePhasesBottomSheet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bottomsheet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bottomsheet" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -3595,15 +3791,17 @@
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="C:/Program Files (x86)/Android/android-sdk" />
-    <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="07038703d00b1a54" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="nexus4api16google" />
-    <property name="DEBUGGABLE_DEVICE" value="lge-nexus_5-07038703d00b1a54" />
+    <property name="DEBUGGABLE_DEVICE" value="lge-nexus_4-006350230c90c785" />
     <property name="DEBUGGABLE_PROCESS" value="com.flipboard.bottomsheet.sample" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AndroidSlidingUpPanel" />
+    <property name="FullScreen" value="false" />
+    <property name="device.picker.selection" value="006350230c90c785" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -3627,10 +3825,20 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <Hybrid>
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Hybrid>
+      <Native>
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Native>
+      <Java />
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method />
@@ -3649,10 +3857,20 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <Hybrid>
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Hybrid>
+      <Native>
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Native>
+      <Java />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3694,8 +3912,45 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
       <envs />
       <method />
     </configuration>
@@ -3735,6 +3990,34 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
     <configuration default="false" name="bottomsheet-sample" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="bottomsheet-sample" />
       <option name="DEPLOY" value="true" />
@@ -3748,10 +4031,20 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
       <option name="USE_LAST_SELECTED_DEVICE" value="true" />
       <option name="PREFERRED_AVD" value="" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <Hybrid>
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Hybrid>
+      <Native>
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Native>
+      <Java />
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method />
@@ -3773,6 +4066,9 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="af0812f4-c5a4-401e-ab75-aec60b6ed4bb" name="Default" comment="" />
@@ -3783,43 +4079,51 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1924" height="1066" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31629393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21160042" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34479055" sideWeight="0.72523963" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22523962" sideWeight="0.5051852" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11771177" sideWeight="0.36261982" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16773163" sideWeight="0.26477832" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21804512" sideWeight="0.36687967" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17931794" sideWeight="0.4978701" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1682641" sideWeight="0.7352217" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2857143" sideWeight="0.5425985" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="1856" y="938" width="50" height="54" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32760474" sideWeight="0.6373802" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13311331" sideWeight="0.5974441" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38238454" sideWeight="0.6501597" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="AdbCommander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2971246" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31629393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3268817" sideWeight="0.6373802" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33548388" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2763441" sideWeight="0.72523963" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22523962" sideWeight="0.5051852" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11771177" sideWeight="0.36261982" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16773163" sideWeight="0.26477832" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2172043" sideWeight="0.36687967" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17931794" sideWeight="0.4978701" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16720258" sideWeight="0.7352217" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42688173" sideWeight="0.5425985" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="1856" y="938" width="50" height="54" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13311331" sideWeight="0.5974441" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="AdbCommander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2971246" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38238454" sideWeight="0.6501597" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -3828,90 +4132,61 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/bottomsheet-sample/src/main/java/com/flipboard/bottomsheet/sample/MyFragment.java</url>
-          <line>88</line>
+          <url>file://$PROJECT_DIR$/bottomsheet/src/main/java/com/flipboard/bottomsheet/BottomSheetLayout.java</url>
+          <line>398</line>
           <properties />
-          <option name="timeStamp" value="5" />
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/bottomsheet-sample/src/main/java/com/flipboard/bottomsheet/sample/BottomSheetFragmentActivity.java</url>
-          <line>31</line>
+          <url>file://$PROJECT_DIR$/bottomsheet/src/main/java/com/flipboard/bottomsheet/BottomSheetLayout.java</url>
+          <line>421</line>
           <properties />
-          <option name="timeStamp" value="6" />
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/bottomsheet/src/main/java/com/flipboard/bottomsheet/BottomSheetLayout.java</url>
+          <line>722</line>
+          <properties />
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/bottomsheet/src/main/java/com/flipboard/bottomsheet/BottomSheetLayout.java</url>
+          <line>563</line>
+          <properties />
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/bottomsheet/src/main/java/com/flipboard/bottomsheet/BottomSheetLayout.java</url>
+          <line>698</line>
+          <properties />
+          <option name="timeStamp" value="55" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="8" />
+      <option name="time" value="56" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Remote">
-        <watch expression="mAppBarLayout.getTotalScrollRange()" />
-        <watch expression="movingIconImageView.getHeight()" />
-        <watch expression="actionBarHeight - actionBarIconPadding" />
-        <watch expression="scale" />
-        <watch expression="1f - progress * scale" />
-        <watch expression="progress" />
+        <watch expression="params" />
+        <watch expression="getHeight()" />
+        <watch expression="getHeight() - sheetTranslation" />
+        <watch expression="object.sheetTranslation" />
+        <watch expression="getSheetView() " />
+        <watch expression="getState()" language="JAVA" custom="" />
+      </configuration>
+      <configuration name="bottomsheet-sample">
+        <watch expression="params" />
+        <watch expression="getHeight()" />
+        <watch expression="getHeight() - sheetTranslation" />
+        <watch expression="object.sheetTranslation" />
+        <watch expression="getSheetView() " />
+        <watch expression="getState()" language="JAVA" custom="" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/java/com/flipboard/bottomsheet/sample/BottomSheetFragmentActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="79" selection-start-line="26" selection-start-column="79" selection-end-line="26" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/java/com/flipboard/bottomsheet/sample/MyFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;method#getActionBarHeight#0;class#MyFragment#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bottomsheet/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/layout/fragment_my.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="83" selection-start-line="50" selection-start-column="83" selection-end-line="50" selection-end-column="83" />
-          <folding>
-            <element signature="e#480#502#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3924,7 +4199,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="148" selection-start-line="35" selection-start-column="148" selection-end-line="35" selection-end-column="148" />
-          <folding />
+          <folding>
+            <element signature="e#834#1163#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3933,6 +4210,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#getActionBarHeight#0;class#MyFragment#0" expanded="true" />
           </folding>
         </state>
@@ -3947,16 +4225,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/layout/fragment_my.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#480#502#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/values/styles.xml">
@@ -3979,7 +4255,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="148" selection-start-line="35" selection-start-column="148" selection-end-line="35" selection-end-column="148" />
-          <folding />
+          <folding>
+            <element signature="e#834#1163#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3988,6 +4266,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#getActionBarHeight#0;class#MyFragment#0" expanded="true" />
           </folding>
         </state>
@@ -4002,16 +4281,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/layout/fragment_my.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-          <folding>
-            <element signature="e#480#502#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/values/styles.xml">
@@ -4030,21 +4307,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19921875">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2849162">
           <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
           <folding>
-            <element signature="e#271#289#0" expanded="true" />
-            <element signature="e#438#468#0" expanded="true" />
+            <element signature="e#271#289#0" expanded="false" />
+            <element signature="e#438#468#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -4058,13 +4327,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bottomsheet/src/main/java/com/flipboard/bottomsheet/ViewTransformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18994413">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -4082,47 +4344,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/layout/activity_bottom_sheet_fragment.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.112769485">
-          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/bottomsheet-commons/src/main/res/layout/list_sheet_view.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bottomsheet-commons/src/main/res/layout/list_sheet_view.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15292096">
           <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/layout/junk_cardview.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26288658">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="e#251#271#0" expanded="false" />
-            <element signature="e#302#322#0" expanded="false" />
-            <element signature="e#354#374#0" expanded="false" />
-            <element signature="e#894#916#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/drawable-mdpi/test.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/mipmap-hdpi/ic_launcher.png">
@@ -4137,66 +4367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bottomsheet/src/main/java/com/flipboard/bottomsheet/BottomSheetLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.7441862">
-          <caret line="542" column="32" selection-start-line="542" selection-start-column="32" selection-end-line="542" selection-end-column="32" />
-          <folding>
-            <element signature="class#1233:1574" expanded="false" />
-            <element signature="method#set#0;class#1233:1574" expanded="false" />
-            <element signature="class#CancelDetectionAnimationListener#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="class#IdentityViewTransformer#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#transformView#0;class#IdentityViewTransformer#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="class#OnSheetStateChangeListener#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#BottomSheetLayout#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#BottomSheetLayout#2;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#BottomSheetLayout#3;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#addView#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#addView#2;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#addView#3;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#onAttachedToWindow#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#setAppBarLayout#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#onDetachedFromWindow#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#onLayout#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#onKeyPreIme#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#setSheetTranslation#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#transformView#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#getDimAlpha#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#onInterceptTouchEvent#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#onTouchEvent#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="e#11851#11914#0" expanded="false" />
-            <element signature="e#16322#16395#0" expanded="false" />
-            <element signature="e#17422#17487#0" expanded="false" />
-            <element signature="method#cancelCurrentAnimation#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#canScrollUp#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#setState#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#hasFullHeightSheet#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#initializeSheetValues#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#peekSheet#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#getPeekSheetTranslation#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#getDefaultPeekTranslation#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#getMaxSheetTranslation#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#setContentView#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#showWithSheetView#1;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="e#26333#26456#0" expanded="false" />
-            <element signature="e#26899#26961#0" expanded="false" />
-            <element signature="method#dismissSheet#1;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="e#28654#28720#0" expanded="false" />
-            <element signature="method#setInterceptContentTouch#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#setDefaultViewTransformer#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#setShouldDimContentView#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#setUseHardwareLayerWhileAnimating#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#addOnSheetStateChangeListener#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#addOnSheetDismissedListener#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#removeOnSheetStateChangeListener#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#removeOnSheetDismissedListener#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#isTablet#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#predictedDefaultWidth#0;class#BottomSheetLayout#0" expanded="false" />
-            <element signature="method#checkNotNull#0;class#BottomSheetLayout#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bottomsheet-commons/src/main/java/com/flipboard/bottomsheet/commons/IntentPickerSheetView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.615257">
@@ -4208,7 +4378,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8615819">
           <caret line="1033" column="17" selection-start-line="1033" selection-start-column="17" selection-end-line="1033" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4216,39 +4385,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.074235804">
           <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09577465">
-          <caret line="4" column="55" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bottomsheet/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2762762">
-          <caret line="25" column="41" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bottomsheet-commons/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/java/com/flipboard/bottomsheet/sample/BottomSheetFragmentActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="41" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4260,41 +4396,332 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/values/colors.xml">
+    <entry file="file://$PROJECT_DIR$/bottomsheet/src/main/java/com/flipboard/bottomsheet/ViewTransformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16915423">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bottomsheet/src/main/java/com/flipboard/bottomsheet/BaseViewTransformer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="25" />
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23287672">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bottomsheet-sample/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3622951">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bottomsheet-commons/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.114754096">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12164579">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/drawable-mdpi/test.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.425">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/layout/activity_bottom_sheet_fragment.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="44" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/layout/junk_cardview.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49244332">
+          <caret line="23" column="42" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Android/android-sdk/sources/android-23/android/animation/ValueAnimator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="946" column="0" selection-start-line="946" selection-start-column="0" selection-end-line="946" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;method#initAnimation#0;class#ValueAnimator#0" expanded="false" />
+            <element signature="e#39212#39213#0" expanded="false" />
+            <element signature="e#39247#39248#0" expanded="false" />
+            <element signature="docComment;method#getRepeatMode#0;class#ValueAnimator#0" expanded="false" />
+            <element signature="e#39474#39475#0" expanded="false" />
+            <element signature="e#48560#48561#0" expanded="false" />
+            <element signature="e#48621#48622#0" expanded="false" />
+            <element signature="e#49833#49834#0" expanded="false" />
+            <element signature="e#49860#49861#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Android/android-sdk/sources/android-23/android/animation/ObjectAnimator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="465" column="0" selection-start-line="465" selection-start-column="0" selection-end-line="465" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Android/android-sdk/sources/android-23/android/animation/PropertyValuesHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6507666">
+          <caret line="962" column="33" selection-start-line="962" selection-start-column="33" selection-end-line="962" selection-end-column="33" />
+          <folding>
+            <element signature="docComment;method#setEvaluator#0;class#PropertyValuesHolder#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Android/android-sdk/sources/android-23/android/view/ViewGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="4130" column="16" selection-start-line="4130" selection-start-column="16" selection-end-line="4130" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Android/android-sdk/extras/android/m2repository/com/android/support/design/23.1.1/design-23.1.1-sources.jar!/android/support/design/widget/CoordinatorLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bottomsheet/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bottomsheet-commons/src/main/java/com/flipboard/bottomsheet/commons/BottomSheetFragmentDelegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.85">
+          <caret line="89" column="34" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Android/android-sdk/extras/android/m2repository/com/android/support/support-v4/23.1.1/support-v4-23.1.1-sources.jar!/android/support/v4/widget/NestedScrollView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="29" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="29" />
+          <folding>
+            <element signature="e#13399#13400#0" expanded="false" />
+            <element signature="e#13442#13443#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/values/dimens.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3877552">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state vertical-scroll-proportion="-3.2692308">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/java/com/flipboard/bottomsheet/sample/BottomSheetFragmentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5306125">
+          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+          <folding>
+            <element signature="e#834#1163#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Android/android-sdk/sources/android-23/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14819" column="30" selection-start-line="14819" selection-start-column="30" selection-end-line="14819" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/res/layout/fragment_my.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.703704">
-          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-          <folding>
-            <element signature="e#480#502#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
       <provider editor-type-id="android-designer">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2647975">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bottomsheet-sample/src/main/java/com/flipboard/bottomsheet/sample/MyFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56344414">
-          <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="52" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#getActionBarHeight#0;class#MyFragment#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bottomsheet-commons/src/main/java/com/flipboard/bottomsheet/commons/BottomSheetFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bottomsheet/src/main/java/com/flipboard/bottomsheet/BottomSheetLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="528" column="28" selection-start-line="528" selection-start-column="28" selection-end-line="528" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1313#1339#0" expanded="true" />
+            <element signature="e#1444#1445#0" expanded="true" />
+            <element signature="e#1498#1499#0" expanded="true" />
+            <element signature="docComment;class#CancelDetectionAnimationListener#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="e#2042#2043#0" expanded="true" />
+            <element signature="e#2081#2082#0" expanded="true" />
+            <element signature="docComment;field#screenWidth#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="e#4202#4279#0" expanded="true" />
+            <element signature="docComment;field#downY#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="docComment;field#downX#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="docComment;field#downSheetTranslation#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="docComment;field#downState#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="e#4960#4961#0" expanded="true" />
+            <element signature="e#4999#5000#0" expanded="true" />
+            <element signature="e#6137#6369#0" expanded="true" />
+            <element signature="e#6368#6369#0" expanded="true" />
+            <element signature="docComment;method#addView#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="e#6863#6864#0" expanded="true" />
+            <element signature="e#6893#6894#0" expanded="true" />
+            <element signature="e#7253#7254#0" expanded="true" />
+            <element signature="e#7283#7284#0" expanded="true" />
+            <element signature="e#19114#19115#0" expanded="true" />
+            <element signature="e#19184#19185#0" expanded="true" />
+            <element signature="e#19221#19222#0" expanded="true" />
+            <element signature="e#19267#19268#0" expanded="true" />
+            <element signature="docComment;method#initializeSheetValues#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="docComment;method#expandSheet#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="e#21514#21765#0" expanded="true" />
+            <element signature="e#21764#21765#0" expanded="true" />
+            <element signature="docComment;method#peekSheet#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="e#22286#22537#0" expanded="true" />
+            <element signature="e#22536#22537#0" expanded="true" />
+            <element signature="docComment;method#getPeekSheetTranslation#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="docComment;method#setPeekSheetTranslation#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="e#23188#23189#0" expanded="true" />
+            <element signature="e#23220#23221#0" expanded="true" />
+            <element signature="docComment;method#getMaxSheetTranslation#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="docComment;method#getContentView#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="e#23664#23665#0" expanded="true" />
+            <element signature="e#23729#23730#0" expanded="true" />
+            <element signature="docComment;method#getSheetView#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="e#23885#23886#0" expanded="true" />
+            <element signature="e#23950#23951#0" expanded="true" />
+            <element signature="docComment;method#setContentView#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="docComment;method#showWithSheetView#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="e#24597#24598#0" expanded="true" />
+            <element signature="e#24647#24648#0" expanded="true" />
+            <element signature="docComment;method#showWithSheetView#1;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="e#25146#25323#0" expanded="true" />
+            <element signature="e#25322#25323#0" expanded="true" />
+            <element signature="e#26757#28020#0" expanded="true" />
+            <element signature="e#26953#27965#0" expanded="true" />
+            <element signature="e#27479#27897#0" expanded="true" />
+            <element signature="e#27896#27897#0" expanded="true" />
+            <element signature="e#27964#27965#0" expanded="true" />
+            <element signature="e#28019#28020#0" expanded="true" />
+            <element signature="e#28205#28948#0" expanded="true" />
+            <element signature="e#28947#28948#0" expanded="true" />
+            <element signature="docComment;method#dismissSheet#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="e#29134#29135#0" expanded="true" />
+            <element signature="e#29168#29169#0" expanded="true" />
+            <element signature="e#29948#30938#0" expanded="true" />
+            <element signature="e#30937#30938#0" expanded="true" />
+            <element signature="docComment;method#setPeekOnDismiss#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="e#31395#31396#0" expanded="true" />
+            <element signature="e#31445#31446#0" expanded="true" />
+            <element signature="docComment;method#getPeekOnDismiss#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="e#31714#31715#0" expanded="true" />
+            <element signature="e#31750#31751#0" expanded="true" />
+            <element signature="docComment;method#setInterceptContentTouch#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="docComment;method#getInterceptContentTouch#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="e#32407#32408#0" expanded="true" />
+            <element signature="e#32451#32452#0" expanded="true" />
+            <element signature="docComment;method#getState#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="e#32545#32546#0" expanded="true" />
+            <element signature="e#32573#32574#0" expanded="true" />
+            <element signature="docComment;method#isSheetShowing#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="e#32690#32691#0" expanded="true" />
+            <element signature="e#32734#32735#0" expanded="true" />
+            <element signature="docComment;method#setDefaultViewTransformer#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="docComment;method#setShouldDimContentView#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="docComment;method#shouldDimContentView#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="e#34030#34031#0" expanded="true" />
+            <element signature="e#34073#34074#0" expanded="true" />
+            <element signature="docComment;method#setUseHardwareLayerWhileAnimating#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="docComment;method#addOnSheetStateChangeListener#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="docComment;method#addOnSheetDismissedListener#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="docComment;method#removeOnSheetStateChangeListener#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="docComment;method#removeOnSheetDismissedListener#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="docComment;method#isTablet#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="docComment;method#predictedDefaultWidth#0;class#BottomSheetLayout#0" expanded="true" />
+            <element signature="e#37311#37396#0" expanded="true" />
           </folding>
         </state>
       </provider>

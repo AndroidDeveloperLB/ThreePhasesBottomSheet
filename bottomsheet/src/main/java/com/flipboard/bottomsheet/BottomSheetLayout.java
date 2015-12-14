@@ -10,6 +10,8 @@ import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.os.Build;
+import android.os.Build.VERSION;
+import android.os.Build.VERSION_CODES;
 import android.support.annotation.NonNull;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.AppBarLayout.OnOffsetChangedListener;
@@ -655,7 +657,7 @@ public class BottomSheetLayout extends FrameLayout {
 
         LayoutParams params = (LayoutParams) sheetView.getLayoutParams();
         if (params == null) {
-            params = new LayoutParams(isTablet ? LayoutParams.WRAP_CONTENT : LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT, Gravity.CENTER_HORIZONTAL);
+            params = new LayoutParams(isTablet ? LayoutParams.WRAP_CONTENT : LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT, Gravity.BOTTOM);
         }
 
         if (isTablet && params.width == FrameLayout.LayoutParams.WRAP_CONTENT) {
@@ -676,7 +678,8 @@ public class BottomSheetLayout extends FrameLayout {
         super.addView(sheetView, -1, params);
         initializeSheetValues();
         this.viewTransformer = viewTransformer;
-
+        if (VERSION.SDK_INT < VERSION_CODES.M)
+            getSheetView().setVisibility(View.INVISIBLE);
         // Don't start animating until the sheet has been drawn once. This ensures that we don't do layout while animating and that
         // the drawing cache for the view has been warmed up. tl;dr it reduces lag.
         getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
@@ -690,6 +693,15 @@ public class BottomSheetLayout extends FrameLayout {
                         // In the case of a large lag it could be that the view is dismissed before it is drawn resulting in sheet view being null here.
                         if (getSheetView() != null) {
                             peekSheet();
+                            if (VERSION.SDK_INT < VERSION_CODES.M)
+                                post(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        if (getSheetView().getTranslationY() == 0)
+                                            getSheetView().setVisibility(View.VISIBLE);
+                                        else post(this);
+                                    }
+                                });
                         }
                     }
                 });
