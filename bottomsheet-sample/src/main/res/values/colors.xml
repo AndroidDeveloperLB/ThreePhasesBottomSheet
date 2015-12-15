@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <color name="primary">#FFE12828</color>
     <color name="primary_dark">#c32727</color>
     <color name="accent">#FF0099CC</color>
-<color name="window_color">#FAFAFA</color>
+    <color name="window_color">#FAFAFA</color>
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
-    package="com.flipboard.bottomsheet"
+    package="com.lb.three_phases_bottom_sheet"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
@@ -9,7 +9,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".sample.BottomSheetFragmentActivity"
+            android:name=".BottomSheetFragmentActivity"
             android:label="@string/bottomsheet_fragment"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
