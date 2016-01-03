@@ -45,6 +45,7 @@ public class BottomSheetLayout extends FrameLayout {
         }
     };
     private Runnable runAfterDismiss;
+    private boolean mEnableDismissByScroll;
 
     /**
      * Utility class which registers if the animation has been canceled so that subclasses may respond differently in onAnimationEnd
@@ -181,6 +182,10 @@ public class BottomSheetLayout extends FrameLayout {
                 mAppBarLayoutOffset = verticalOffset;
             }
         };
+    }
+
+    public void setEnableDismissByScroll(final boolean enableDismissByScroll) {
+        mEnableDismissByScroll = enableDismissByScroll;
     }
 
     /**
@@ -351,7 +356,7 @@ public class BottomSheetLayout extends FrameLayout {
 
         if (!bottomSheetOwnsTouch && !sheetViewOwnsTouch) {
             bottomSheetOwnsTouch = Math.abs(deltaY) > touchSlop;
-            sheetViewOwnsTouch =false;// Math.abs(deltaX) > touchSlop;
+            sheetViewOwnsTouch = false;// Math.abs(deltaX) > touchSlop;
             if (bottomSheetOwnsTouch) {
                 if (state == State.PEEKED) {
                     MotionEvent cancelEvent = MotionEvent.obtain(event);
@@ -434,7 +439,9 @@ public class BottomSheetLayout extends FrameLayout {
 
                 if (event.getAction() == MotionEvent.ACTION_UP) {
                     if (newSheetTranslation < peekSheetTranslation) {
-                        dismissSheet();
+                        if (mEnableDismissByScroll)
+                            dismissSheet();
+                        else peekSheet();
                     } else {
                         // If touch is released, go to a new state depending on velocity.
                         // If the velocity is not high enough we use the position of the sheet to determine the new state.

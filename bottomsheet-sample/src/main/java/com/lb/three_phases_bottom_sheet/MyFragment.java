@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.AppBarLayout.OnOffsetChangedListener;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -29,28 +28,37 @@ import com.flipboard.bottomsheet.commons.BottomSheetFragment;
 public class MyFragment extends BottomSheetFragment {
     private BottomSheetLayout mBottomSheetLayout;
     private ImageView mBottomSheetBackgroundImageView;
-    private int mBottomSheetHeight;
+    //private int mBottomSheetHeight;
     private int mMovingImageviewSize;
-    private ImageView movingIconImageView;
+    private ImageView mMovingIconImageView;
     private AppBarLayout mAppBarLayout;
     private Toolbar mLeftToolbar;
     private TextView mTitleExpanded, mTitleCollapsed;
     private ViewPropertyAnimator mTitleExpandedAnimation, mToolbarAnimation;
     private View mBottomsheetContentView;
     private int mMovingImageExpandedBottomSheetMarginLeft;
+    private int mBottomSheetHeightExpanded, mBottomSheetHeightPeeked;
+    private BottomSheetState mBottomSheetState = BottomSheetState.HIDDEN;
+
+    enum BottomSheetState {
+        HIDDEN, HIDDEN_PEEKED, PEEKED, PEEKED_EXPANDED, EXPANDED
+    }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_my, container, false);
         view.setMinimumHeight(getResources().getDisplayMetrics().heightPixels);
-        mBottomSheetHeight = getResources().getDimensionPixelSize(R.dimen.header_height);
-        mMovingImageviewSize = getResources().getDimensionPixelSize(R.dimen.moving_image_size);
+        mBottomSheetHeightExpanded = getResources().getDimensionPixelSize(R.dimen.header_height_expanded);
+        mBottomSheetHeightPeeked = getResources().getDimensionPixelSize(R.dimen.header_height_peeked);
+
+        mMovingImageviewSize = getResources().getDimensionPixelSize(R.dimen.moving_image_collapsed_bottom_sheet_size);
         mTitleExpanded = (TextView) view.findViewById(R.id.fragment_search_activity_result__expandedTitleTextView);
         mTitleCollapsed = (TextView) view.findViewById(R.id.fragment_search_activity_result__collapsedTitleTextView);
-        final CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) view.findViewById(R.id.collapsingToolbarLayout);
         mBottomsheetContentView = view.findViewById(R.id.bottomsheetContentView);
         ((MarginLayoutParams) mBottomsheetContentView.getLayoutParams()).topMargin = mMovingImageviewSize / 2;
+        ((MarginLayoutParams) mBottomsheetContentView.getLayoutParams()).height = mBottomSheetHeightPeeked - mMovingImageviewSize / 2;
+
         mBottomsheetContentView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(final View v) {
@@ -71,31 +79,26 @@ public class MyFragment extends BottomSheetFragment {
         mBottomSheetBackgroundImageView = (ImageView) view.findViewById(R.id.backdrop);
         mBottomSheetBackgroundImageView.setAlpha(0.0f);
         mBottomSheetBackgroundImageView.setY(mMovingImageviewSize / 2);
-        //mBottomSheetBackgroundImageView.setImageResource(R.drawable.background);
         final Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.background);
         mBottomSheetBackgroundImageView.setImageBitmap(bm);
-        movingIconImageView = (ImageView) view.findViewById(R.id.movingIconImageView);
+        mMovingIconImageView = (ImageView) view.findViewById(R.id.movingIconImageView);
         if (mBottomSheetLayout != null)
             mBottomSheetLayout.setAppBarLayout(mAppBarLayout);
         final int actionBarHeight = Utils.getActionBarHeight(getActivity());
 
-        movingIconImageView.setPivotX(0);
-        movingIconImageView.setPivotY(0);
+        mMovingIconImageView.setPivotX(0);
+        mMovingIconImageView.setPivotY(0);
         mTitleExpanded.setPivotX(0);
         mTitleExpanded.setAlpha(0);
         mTitleCollapsed.setAlpha(0);
         mMovingImageExpandedBottomSheetMarginLeft = getResources().getDimensionPixelSize(R.dimen.moving_image_expanded_bottom_sheet_margin_left);
 
         mAppBarLayout.addOnOffsetChangedListener(new OnOffsetChangedListener() {
-            final float actionBarIconPadding = getResources().getDimensionPixelSize(R.dimen.moving_image_collapsed_toolbar_top_and_bottom_padding);
             final float actionBarIconPaddingText = getResources().getDimensionPixelSize(R.dimen.moving_text_collapsed_toolbar_top_and_bottom_padding);
             final float startMarginBottomText = getResources().getDimensionPixelSize(R.dimen.moving_text_expanded_toolbar_bottom_margin);
             final float startMarginLeftText = getResources().getDimensionPixelSize(R.dimen.moving_text_expanded_toolbar_margin_left);
-            float targetY;
             boolean init = false;
-            float startY;
-            float scaleDiff;
-            float startScale;
+            float startY, scaleDiff, startScale, targetY;
             //
             float scaleDiffTitle;
             float startYTitle;
@@ -104,14 +107,22 @@ public class MyFragment extends BottomSheetFragment {
             public void onOffsetChanged(final AppBarLayout appBarLayout, final int verticalOffset) {
                 if (mBottomSheetLayout != null && mBottomSheetLayout.isSheetShowing() && mBottomSheetLayout.getState() == State.EXPANDED) {
                     float progress = (float) -verticalOffset / mAppBarLayout.getTotalScrollRange();
-                    movingIconImageView.setX(mMovingImageExpandedBottomSheetMarginLeft + (progress * (actionBarHeight - mMovingImageExpandedBottomSheetMarginLeft)));
+                    mMovingIconImageView.setX(mMovingImageExpandedBottomSheetMarginLeft + (progress * (actionBarHeight - mMovingImageExpandedBottomSheetMarginLeft)));
                     if (!init) {
                         //imageview
-                        startScale = movingIconImageView.getScaleX();
-                        startY = movingIconImageView.getY();
+                        startScale = mMovingIconImageView.getScaleX();
+                        //
+                        final int startMarginBottom = getResources().getDimensionPixelSize(R.dimen.header_view_start_margin_bottom);
+                        final float targetSizeWhenBottomSheetExpanded = getResources().getDimensionPixelSize(R.dimen.moving_image_expanded_bottom_sheet_size);
+                        final float startSizeWhenBottomSheetCollapsed = getResources().getDimensionPixelSize(R.dimen.moving_image_collapsed_bottom_sheet_size);
+                        scaleDiff = (startSizeWhenBottomSheetCollapsed - targetSizeWhenBottomSheetExpanded) / startSizeWhenBottomSheetCollapsed;
+                        final float scaleForImageView = 1 - scaleDiff;
+                        startY = mBottomSheetHeightExpanded - startMarginBottom - mMovingIconImageView.getHeight() * scaleForImageView;
+                        //
+                        final float actionBarIconPadding = getResources().getDimensionPixelSize(R.dimen.moving_image_collapsed_toolbar_top_and_bottom_padding);
                         final float targetImageViewSize = actionBarHeight - actionBarIconPadding * 2;
-                        targetY = mBottomSheetHeight - actionBarIconPadding - targetImageViewSize;
-                        float targetScale = targetImageViewSize / mMovingImageviewSize;
+                        targetY = mBottomSheetHeightExpanded - actionBarIconPadding - targetImageViewSize;
+                        final float targetScale = targetImageViewSize / mMovingImageviewSize;
                         scaleDiff = startScale - targetScale;
                         //text:
                         scaleDiffTitle = 1 - (actionBarHeight - actionBarIconPaddingText * 2) / mTitleExpanded.getHeight();
@@ -130,9 +141,9 @@ public class MyFragment extends BottomSheetFragment {
                         mTitleExpandedAnimation = null;
                     }
                     final float newScale = startScale - progress * scaleDiff;
-                    movingIconImageView.setScaleX(newScale);
-                    movingIconImageView.setScaleY(newScale);
-                    movingIconImageView.setY(startY - progress * (startY - targetY));
+                    mMovingIconImageView.setScaleX(newScale);
+                    mMovingIconImageView.setScaleY(newScale);
+                    mMovingIconImageView.setY(startY - progress * (startY - targetY));
 
                     mTitleExpanded.setScaleX(1f - progress * scaleDiffTitle);
                     mTitleExpanded.setScaleY(1f - progress * scaleDiffTitle);
@@ -150,11 +161,10 @@ public class MyFragment extends BottomSheetFragment {
     @Override
     public ViewTransformer getViewTransformer() {
         final float targetSizeWhenBottomSheetExpanded = getResources().getDimensionPixelSize(R.dimen.moving_image_expanded_bottom_sheet_size);
-        final float startSizeWhenBottomSheetCollapsed = getResources().getDimensionPixelSize(R.dimen.moving_image_size);
+        final float startSizeWhenBottomSheetCollapsed = getResources().getDimensionPixelSize(R.dimen.moving_image_collapsed_bottom_sheet_size);
         final float startMarginBottom = getResources().getDimensionPixelSize(R.dimen.moving_image_expanded_bottom_sheet_margin_bottom);
         return new BaseViewTransformer() {
             boolean init = false;
-            ViewPropertyAnimator mBottomSheetBackgroundImageViewFadeInAnimation, mBottomSheetBackgroundImageViewFadeOutAnimation;
             float mOriginalContactPhotoXCoordinate;
             float mOriginalBottomSheetBackgroundImageViewY;
             float scaleDiff;
@@ -169,44 +179,57 @@ public class MyFragment extends BottomSheetFragment {
             public void transformView(final float translation, final float maxTranslation, final float peekedTranslation, final BottomSheetLayout parent, final View view) {
                 if (!init) {
                     mOriginalBottomSheetBackgroundImageViewY = mMovingImageviewSize / 2;
-                    mOriginalContactPhotoXCoordinate = movingIconImageView.getX();
+                    mOriginalContactPhotoXCoordinate = mMovingIconImageView.getX();
                     scaleDiff = (startSizeWhenBottomSheetCollapsed - targetSizeWhenBottomSheetExpanded) / startSizeWhenBottomSheetCollapsed;
                     init = true;
                 }
-                //Log.d("AppLog", "translation:" + translation + " mBottomSheetHeight:" + mBottomSheetHeight + " maxTranslation:" + maxTranslation);
-                //mAppBarLayout.sett(translation > mBottomSheetHeight);
-                //mNestedScrollView.isTouchEnabled = translation > mBottomSheetHeight;
-                //((ViewGroup) mNestedScrollView.getChildAt(0)).requestDisallowInterceptTouchEvent(translation <= mBottomSheetHeight);
-                //boolean allowScrolling = translation >= maxTranslation;
-                //Log.d("AppLog", "should allow scrolling?" + allowScrolling);
-                //Log.d("AppLog", "");
-                //mAppBarLayout.allowTouch = allowScrolling;
-                if (translation < mBottomSheetHeight) {
+                if (translation < mBottomSheetHeightPeeked) {
+                    //hidden<->peeked or hidden
+                    reportState(translation == 0 ? BottomSheetState.HIDDEN : BottomSheetState.HIDDEN_PEEKED);
                     return;
                 }
-                if (translation == mBottomSheetHeight) {
-                    if (mBottomSheetBackgroundImageViewFadeInAnimation != null)
-                        mBottomSheetBackgroundImageViewFadeInAnimation.cancel();
-                    mBottomSheetBackgroundImageViewFadeInAnimation = null;
-                    if (mBottomSheetBackgroundImageViewFadeOutAnimation == null)
-                        mBottomSheetBackgroundImageViewFadeOutAnimation = mBottomSheetBackgroundImageView.animate().alpha(0);
+                if (translation == mBottomSheetHeightPeeked) {
+                    //peek
+                    reportState(BottomSheetState.PEEKED);
                 } else {
-                    if (mBottomSheetBackgroundImageViewFadeOutAnimation != null)
-                        mBottomSheetBackgroundImageViewFadeOutAnimation.cancel();
-                    mBottomSheetBackgroundImageViewFadeOutAnimation = null;
-                    if (mBottomSheetBackgroundImageViewFadeInAnimation == null)
-                        mBottomSheetBackgroundImageViewFadeInAnimation = mBottomSheetBackgroundImageView.animate().alpha(1);
+                    //peek->expand
+                    reportState(translation == maxTranslation ? BottomSheetState.EXPANDED : BottomSheetState.PEEKED_EXPANDED);
                 }
-                float progress = (translation - mBottomSheetHeight) / (maxTranslation - mBottomSheetHeight);
+                float progress = (translation - mBottomSheetHeightPeeked) / (maxTranslation - mBottomSheetHeightPeeked);
                 //Log.d("AppLog", "translation:" + translation + " maxTranslation:" + maxTranslation + " progress:" + progress);
-                movingIconImageView.setX(mOriginalContactPhotoXCoordinate - progress * (mOriginalContactPhotoXCoordinate - mMovingImageExpandedBottomSheetMarginLeft));
+                mMovingIconImageView.setX(mOriginalContactPhotoXCoordinate - progress * (mOriginalContactPhotoXCoordinate - mMovingImageExpandedBottomSheetMarginLeft));
                 final float scaleForImageView = 1 - progress * scaleDiff;
-                movingIconImageView.setScaleX(scaleForImageView);
-                movingIconImageView.setScaleY(scaleForImageView);
-                movingIconImageView.setY(progress * (mBottomSheetHeight - startMarginBottom - movingIconImageView.getHeight() * scaleForImageView));
+                mMovingIconImageView.setScaleX(scaleForImageView);
+                mMovingIconImageView.setScaleY(scaleForImageView);
+                final float newMovingIconImageViewY = progress * (mBottomSheetHeightExpanded - startMarginBottom - mMovingIconImageView.getHeight() * scaleForImageView);
+                mMovingIconImageView.setY(newMovingIconImageViewY);
                 mBottomSheetBackgroundImageView.setY(mOriginalBottomSheetBackgroundImageViewY * (1 - progress));
             }
         };
+    }
+
+    protected void reportState(final BottomSheetState state) {
+        if (mBottomSheetState != state) {
+            mBottomSheetState = state;
+            switch (state) {
+                case HIDDEN:
+                    break;
+                case HIDDEN_PEEKED:
+                    break;
+                case PEEKED:
+                    mBottomSheetBackgroundImageView.animate().cancel();
+                    final ViewPropertyAnimator animator = mBottomSheetBackgroundImageView.animate();
+                    animator.setDuration(getResources().getInteger(android.R.integer.config_shortAnimTime));
+                    animator.alpha(0);
+                    break;
+                case PEEKED_EXPANDED:
+                    mBottomSheetBackgroundImageView.animate().cancel();
+                    mBottomSheetBackgroundImageView.animate().alpha(1);
+                    break;
+                case EXPANDED:
+                    break;
+            }
+        }
     }
 
     public void setBottomSheetLayout(final BottomSheetLayout bottomSheetLayout) {

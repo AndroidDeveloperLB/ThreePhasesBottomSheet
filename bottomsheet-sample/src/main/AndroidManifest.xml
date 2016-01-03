@@ -9,7 +9,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".BottomSheetFragmentActivity"
+            android:name=".MainActivity"
             android:label="@string/bottomsheet_fragment"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

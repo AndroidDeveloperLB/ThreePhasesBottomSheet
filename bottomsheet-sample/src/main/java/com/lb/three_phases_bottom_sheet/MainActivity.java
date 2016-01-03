@@ -19,7 +19,7 @@ import com.google.android.gms.maps.GoogleMap;
 /**
  * Activity demonstrating the use of {@link ImagePickerSheetView}
  */
-public final class BottomSheetFragmentActivity extends AppCompatActivity {
+public final class MainActivity extends AppCompatActivity {
     protected BottomSheetLayout mBottomSheetLayout;
     private View mFocusStealer;
     private GoogleMap mMap;
@@ -74,9 +74,10 @@ public final class BottomSheetFragmentActivity extends AppCompatActivity {
             myFragment.setBottomSheetLayout(mBottomSheetLayout);
             myFragment.show(getSupportFragmentManager(), R.id.bottomsheet);
         }
+        mBottomSheetLayout.setEnableDismissByScroll(false);
         mBottomSheetLayout.setShouldDimContentView(false);
         mBottomSheetLayout.setPeekOnDismiss(true);
-        mBottomSheetLayout.setPeekSheetTranslation(getResources().getDimensionPixelSize(R.dimen.header_height));
+        mBottomSheetLayout.setPeekSheetTranslation(getResources().getDimensionPixelSize(R.dimen.header_height_peeked));
         mBottomSheetLayout.setInterceptContentTouch(false);
     }
 
@@ -91,7 +92,7 @@ public final class BottomSheetFragmentActivity extends AppCompatActivity {
 
     private void showBottomSheet() {
         mFocusStealer.requestFocus();
-        Utils.hideSoftKeyboardFromFocusedView(BottomSheetFragmentActivity.this);
+        Utils.hideSoftKeyboardFromFocusedView(MainActivity.this);
         final MyFragment myFragment = new MyFragment();
         myFragment.setBottomSheetLayout(mBottomSheetLayout);
         myFragment.show(getSupportFragmentManager(), R.id.bottomsheet);

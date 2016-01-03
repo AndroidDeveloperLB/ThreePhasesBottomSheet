@@ -17,7 +17,7 @@
         <android.support.design.widget.AppBarLayout
             android:id="@+id/appbar"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/header_height"
+            android:layout_height="@dimen/header_height_expanded"
             android:background="@null">
 
             <android.support.design.widget.CollapsingToolbarLayout
@@ -77,8 +77,8 @@
 
                 <com.mikhaellopez.circularimageview.CircularImageView
                     android:id="@+id/movingIconImageView"
-                    android:layout_width="@dimen/moving_image_size"
-                    android:layout_height="@dimen/moving_image_size"
+                    android:layout_width="@dimen/moving_image_collapsed_bottom_sheet_size"
+                    android:layout_height="@dimen/moving_image_collapsed_bottom_sheet_size"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/sample_image"
                     app:border="true"
