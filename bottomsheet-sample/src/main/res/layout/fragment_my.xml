@@ -60,20 +60,6 @@
                         android:singleLine="true"
                         android:text="title"/>
                 </android.support.v7.widget.Toolbar>
-                <!--<ImageView-->
-                <!--android:id="@+id/movingIconImageView"-->
-                <!--android:layout_width="@dimen/moving_image_size"-->
-                <!--android:layout_height="@dimen/moving_image_size"-->
-                <!--android:layout_gravity="center_horizontal"-->
-                <!--android:adjustViewBounds="false"-->
-                <!--android:scaleType="centerCrop"-->
-                <!--android:src="@drawable/sample_image"-->
-                <!--app:border="true"-->
-                <!--app:border_color="#fff"-->
-                <!--app:border_width="2dp"-->
-                <!--app:shadow="true"-->
-                <!--app:shadow_color="#44000000"-->
-                <!--app:shadow_radius="4"/>-->
 
                 <com.mikhaellopez.circularimageview.CircularImageView
                     android:id="@+id/movingIconImageView"

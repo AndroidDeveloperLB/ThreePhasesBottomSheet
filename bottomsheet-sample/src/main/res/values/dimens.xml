@@ -2,8 +2,8 @@
     <dimen name="card_margin">16dp</dimen>
 
     <dimen name="header_height_expanded">220dp</dimen>
-    <!--size of bottom sheet when peeked. must not be more than when expanded-->
-    <dimen name="header_height_peeked">200dp</dimen>
+    <!--size of bottom sheet when peeked. must not be more than when expanded, unless not using appBarLayout method-->
+    <dimen name="header_height_peeked">340dp</dimen>
 
     <!--moving imageView specs-->
     <dimen name="moving_image_expanded_bottom_sheet_size">80dp</dimen>
@@ -20,5 +20,6 @@
     <dimen name="moving_text_collapsed_toolbar_margin_right">14dp</dimen>
     <dimen name="moving_text_collapsed_toolbar_top_and_bottom_padding">12dp</dimen>
     <dimen name="header_view_start_margin_bottom">32dp</dimen>
+
 
 </resources>

@@ -40,8 +40,4 @@ dependencies {
     compile 'com.android.support:design:23.1.1'
     compile 'com.android.support:cardview-v7:23.1.1'
     compile 'com.mikhaellopez:circularimageview:2.1.1'
-    compile 'com.google.android.gms:play-services-maps:8.4.0'
-
-
-
 }

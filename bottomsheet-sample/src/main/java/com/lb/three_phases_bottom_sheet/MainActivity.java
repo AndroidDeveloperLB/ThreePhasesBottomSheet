@@ -1,9 +1,11 @@
 package com.lb.three_phases_bottom_sheet;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
 import android.view.View.OnKeyListener;
 import android.view.inputmethod.EditorInfo;
@@ -12,9 +14,7 @@ import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 
 import com.flipboard.bottomsheet.BottomSheetLayout;
-import com.flipboard.bottomsheet.BottomSheetLayout.State;
 import com.flipboard.bottomsheet.commons.ImagePickerSheetView;
-import com.google.android.gms.maps.GoogleMap;
 
 /**
  * Activity demonstrating the use of {@link ImagePickerSheetView}
@@ -22,20 +22,29 @@ import com.google.android.gms.maps.GoogleMap;
 public final class MainActivity extends AppCompatActivity {
     protected BottomSheetLayout mBottomSheetLayout;
     private View mFocusStealer;
-    private GoogleMap mMap;
+    private static boolean useAppBarLayoutMethod = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bottom_sheet_fragment);
+        setContentView(R.layout.activity_main);
         mFocusStealer = findViewById(R.id.focusStealer);
         mBottomSheetLayout = (BottomSheetLayout) findViewById(R.id.bottomsheet);
         findViewById(R.id.bottomsheet_fragment_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                useAppBarLayoutMethod = true;
                 showBottomSheet();
             }
         });
+        findViewById(R.id.bottomsheet_fragment_button2).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                useAppBarLayoutMethod = false;
+                showBottomSheet();
+            }
+        });
+
         EditText editText = (EditText) findViewById(R.id.bottomsheet_fragment_editText);
         editText.setOnEditorActionListener(new OnEditorActionListener() {
 
@@ -66,13 +75,22 @@ public final class MainActivity extends AppCompatActivity {
             }
         });
 
-        MyFragment myFragment = (MyFragment) getSupportFragmentManager().findFragmentByTag(Integer.toString(R.id.bottomsheet));
-        if (myFragment != null) {
+        final Fragment fragment = getSupportFragmentManager().findFragmentByTag(Integer.toString(R.id.bottomsheet));
+
+        if (fragment != null && fragment instanceof MyFragment) {
+            MyFragment myFragment = (MyFragment) fragment;
             getSupportFragmentManager().beginTransaction().remove(myFragment).commit();
-            //myFragment.dismiss();
             myFragment = new MyFragment();
             myFragment.setBottomSheetLayout(mBottomSheetLayout);
             myFragment.show(getSupportFragmentManager(), R.id.bottomsheet);
+        }
+
+        if (fragment != null && fragment instanceof MyFragment2) {
+            MyFragment2 myFragment2 = (MyFragment2) fragment;
+            getSupportFragmentManager().beginTransaction().remove(myFragment2).commit();
+            myFragment2 = new MyFragment2();
+            myFragment2.setBottomSheetLayout(mBottomSheetLayout);
+            myFragment2.show(getSupportFragmentManager(), R.id.bottomsheet);
         }
         mBottomSheetLayout.setEnableDismissByScroll(false);
         mBottomSheetLayout.setShouldDimContentView(false);
@@ -83,19 +101,35 @@ public final class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (mBottomSheetLayout.getState() != State.HIDDEN) {
-            mBottomSheetLayout.dismissSheet();
-            return;
+        switch (mBottomSheetLayout.getState()) {
+            case HIDDEN:
+                super.onBackPressed();
+                break;
+            case PREPARING:
+                super.onBackPressed();
+                break;
+            case PEEKED:
+                mBottomSheetLayout.dismissSheet();
+                break;
+            case EXPANDED:
+                mBottomSheetLayout.peekSheet();
+                break;
         }
-        super.onBackPressed();
     }
 
     private void showBottomSheet() {
         mFocusStealer.requestFocus();
         Utils.hideSoftKeyboardFromFocusedView(MainActivity.this);
-        final MyFragment myFragment = new MyFragment();
-        myFragment.setBottomSheetLayout(mBottomSheetLayout);
-        myFragment.show(getSupportFragmentManager(), R.id.bottomsheet);
+        if (useAppBarLayoutMethod) {
+            final MyFragment myFragment = new MyFragment();
+            //final MyFragment2 myFragment = new MyFragment2();
+            myFragment.setBottomSheetLayout(mBottomSheetLayout);
+            myFragment.show(getSupportFragmentManager(), R.id.bottomsheet);
+        } else {
+            final MyFragment2 myFragment = new MyFragment2();
+            myFragment.setBottomSheetLayout(mBottomSheetLayout);
+            myFragment.show(getSupportFragmentManager(), R.id.bottomsheet);
+        }
     }
 
 }

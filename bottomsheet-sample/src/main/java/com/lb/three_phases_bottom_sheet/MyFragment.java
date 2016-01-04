@@ -8,10 +8,8 @@ import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.AppBarLayout.OnOffsetChangedListener;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.MarginLayoutParams;
 import android.view.ViewPropertyAnimator;
@@ -34,7 +32,7 @@ public class MyFragment extends BottomSheetFragment {
     private Toolbar mLeftToolbar;
     private TextView mTitleExpanded, mTitleCollapsed;
     private ViewPropertyAnimator mTitleExpandedAnimation, mToolbarAnimation;
-    private View mBottomsheetContentView;
+    private View mBottomSheetContentView;
     private int mMovingImageExpandedBottomSheetMarginLeft;
     private int mBottomSheetHeightExpanded, mBottomSheetHeightPeeked;
     private BottomSheetState mBottomSheetState = BottomSheetState.HIDDEN;
@@ -48,17 +46,17 @@ public class MyFragment extends BottomSheetFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_my, container, false);
         view.setMinimumHeight(getResources().getDisplayMetrics().heightPixels);
-        mBottomSheetHeightExpanded = getResources().getDimensionPixelSize(R.dimen.header_height_expanded);
         mBottomSheetHeightPeeked = getResources().getDimensionPixelSize(R.dimen.header_height_peeked);
+        mBottomSheetHeightExpanded = Math.max(mBottomSheetHeightPeeked, getResources().getDimensionPixelSize(R.dimen.header_height_expanded));
 
         mMovingImageviewSize = getResources().getDimensionPixelSize(R.dimen.moving_image_collapsed_bottom_sheet_size);
         mTitleExpanded = (TextView) view.findViewById(R.id.fragment_search_activity_result__expandedTitleTextView);
         mTitleCollapsed = (TextView) view.findViewById(R.id.fragment_search_activity_result__collapsedTitleTextView);
-        mBottomsheetContentView = view.findViewById(R.id.bottomsheetContentView);
-        ((MarginLayoutParams) mBottomsheetContentView.getLayoutParams()).topMargin = mMovingImageviewSize / 2;
-        ((MarginLayoutParams) mBottomsheetContentView.getLayoutParams()).height = mBottomSheetHeightPeeked - mMovingImageviewSize / 2;
+        mBottomSheetContentView = view.findViewById(R.id.bottomsheetContentView);
+        ((MarginLayoutParams) mBottomSheetContentView.getLayoutParams()).topMargin = mMovingImageviewSize / 2;
+        ((MarginLayoutParams) mBottomSheetContentView.getLayoutParams()).height = mBottomSheetHeightPeeked - mMovingImageviewSize / 2;
 
-        mBottomsheetContentView.setOnClickListener(new OnClickListener() {
+        mBottomSheetContentView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(final View v) {
                 mBottomSheetLayout.expandSheet();
@@ -66,6 +64,7 @@ public class MyFragment extends BottomSheetFragment {
         });
 
         mAppBarLayout = (AppBarLayout) view.findViewById(R.id.appbar);
+        mAppBarLayout.getLayoutParams().height = mBottomSheetHeightExpanded;
         mLeftToolbar = (Toolbar) view.findViewById(R.id.toolbar);
         mLeftToolbar.setNavigationIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
         mLeftToolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -168,12 +167,6 @@ public class MyFragment extends BottomSheetFragment {
             float mOriginalContactPhotoXCoordinate;
             float mOriginalBottomSheetBackgroundImageViewY;
             float scaleDiff;
-            OnTouchListener mOnTouchListener = new OnTouchListener() {
-                @Override
-                public boolean onTouch(final View v, final MotionEvent event) {
-                    return true;
-                }
-            };
 
             @Override
             public void transformView(final float translation, final float maxTranslation, final float peekedTranslation, final BottomSheetLayout parent, final View view) {

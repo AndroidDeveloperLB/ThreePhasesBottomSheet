@@ -14,9 +14,17 @@
             android:id="@+id/bottomsheet_fragment_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|top"
+            android:layout_gravity="center_horizontal"
             android:layout_marginBottom="16dp"
-            android:text="@string/show"/>
+            android:text="method 1 (using AppBarLayout, CoordinatorLayout,...)"/>
+
+        <Button
+            android:id="@+id/bottomsheet_fragment_button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:text="method 2 (using just NestedScrollView)"/>
 
         <EditText
             android:id="@+id/bottomsheet_fragment_editText"

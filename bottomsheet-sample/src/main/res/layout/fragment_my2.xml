@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/bottomsheetHeader"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/header_height_peeked"
+                tools:paddingTop="55dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ddd"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:background="#5f5"
+                    android:text="top"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="#f55"
+                    android:text="bottom"/>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/bottomsheetContentView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/window_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#0ff"
+                    android:text="top"/>
+
+                <include layout="@layout/junk_cardview"/>
+
+                <include layout="@layout/junk_cardview"/>
+
+                <include layout="@layout/junk_cardview"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#05f"
+                    android:text="bottom"/>
+
+            </LinearLayout>
+        </FrameLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/bottomSheetTopHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height_peeked">
+
+        <ImageView
+            android:id="@+id/backdrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background"/>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ToolbarColoredBackArrow">
+
+            <TextView
+                android:id="@+id/fragment_search_activity_result__collapsedTitleTextView"
+                style="@style/CollapsedAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="?attr/actionBarSize"
+                android:singleLine="true"
+                android:text="Title"/>
+        </android.support.v7.widget.Toolbar>
+
+    </FrameLayout>
+
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/movingIconImageView"
+        android:layout_width="@dimen/moving_image_collapsed_bottom_sheet_size"
+        android:layout_height="@dimen/moving_image_collapsed_bottom_sheet_size"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/sample_image"
+        app:border="true"
+        app:border_color="#fff"
+        app:border_width="2dp"
+        app:shadow="true"
+        app:shadow_color="#44000000"
+        app:shadow_radius="4"
+        tools:background="#f00"/>
+
+    <TextView
+        android:id="@+id/fragment_search_activity_result__expandedTitleTextView"
+        style="@style/CollapsedAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="Title"
+        android:textSize="30dp"/>
+    <!--android:layout_gravity="bottom|left"-->
+    <!--android:layout_marginBottom="@dimen/moving_text_expanded_toolbar_bottom_margin"-->
+    <!--android:layout_marginLeft="@dimen/moving_text_expanded_toolbar_margin_left"-->
+    <!--android:layout_marginRight="@dimen/moving_text_collapsed_toolbar_margin_right"-->
+</FrameLayout>
