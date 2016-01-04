@@ -46,6 +46,57 @@ public class BottomSheetLayout extends FrameLayout {
     };
     private Runnable runAfterDismiss;
     private boolean mEnableDismissByScroll;
+    private static final long ANIMATION_DURATION = 300;
+    private final Rect contentClipRect = new Rect();
+    private State state = State.HIDDEN;
+    private boolean peekOnDismiss = false;
+    private final TimeInterpolator animationInterpolator = new DecelerateInterpolator(1.6f);
+    public boolean bottomSheetOwnsTouch;
+    private boolean sheetViewOwnsTouch;
+    private float sheetTranslation;
+    private VelocityTracker velocityTracker;
+    private float minFlingVelocity;
+    private float touchSlop;
+    private ViewTransformer defaultViewTransformer = new IdentityViewTransformer();
+    private ViewTransformer viewTransformer;
+    private boolean shouldDimContentView = true;
+    private boolean useHardwareLayerWhileAnimating = true;
+    private Animator currentAnimator;
+    private final CopyOnWriteArraySet<OnSheetDismissedListener> onSheetDismissedListeners = new CopyOnWriteArraySet<>();
+    private  final CopyOnWriteArraySet<OnSheetStateChangeListener> onSheetStateChangeListeners = new CopyOnWriteArraySet<>();
+    private OnLayoutChangeListener sheetViewOnLayoutChangeListener;
+    private View dimView;
+    private boolean interceptContentTouch = true;
+    private int currentSheetViewHeight;
+    private boolean hasIntercepted;
+    private float peek;
+    private AppBarLayout mAppBarLayout;
+    private OnOffsetChangedListener mOnOffsetChangedListener;
+    private int mAppBarLayoutOffset;
+    /**
+     * Some values we need to manage width on tablets
+     */
+    private int screenWidth = 0;
+    private final boolean isTablet = getResources().getBoolean(R.bool.bottomsheet_is_tablet);
+    private final int defaultSheetWidth = getResources().getDimensionPixelSize(R.dimen.bottomsheet_default_sheet_width);
+    private int sheetStartX = 0;
+    private int sheetEndX = 0;
+    /**
+     * Snapshot of the touch's y position on a down event
+     */
+    private float downY;
+    /**
+     * Snapshot of the touch's x position on a down event
+     */
+    private float downX;
+    /**
+     * Snapshot of the sheet's translation at the time of the last down event
+     */
+    private float downSheetTranslation;
+    /**
+     * Snapshot of the sheet's state at the time of the last down event
+     */
+    private State downState;
 
     /**
      * Utility class which registers if the animation has been canceled so that subclasses may respond differently in onAnimationEnd
@@ -78,65 +129,6 @@ public class BottomSheetLayout extends FrameLayout {
     public interface OnSheetStateChangeListener {
         void onSheetStateChanged(State state);
     }
-
-    private static final long ANIMATION_DURATION = 300;
-
-    private Rect contentClipRect = new Rect();
-    private State state = State.HIDDEN;
-    private boolean peekOnDismiss = false;
-    private TimeInterpolator animationInterpolator = new DecelerateInterpolator(1.6f);
-    public boolean bottomSheetOwnsTouch;
-    private boolean sheetViewOwnsTouch;
-    private float sheetTranslation;
-    private VelocityTracker velocityTracker;
-    private float minFlingVelocity;
-    private float touchSlop;
-    private ViewTransformer defaultViewTransformer = new IdentityViewTransformer();
-    private ViewTransformer viewTransformer;
-    private boolean shouldDimContentView = true;
-    private boolean useHardwareLayerWhileAnimating = true;
-    private Animator currentAnimator;
-    private CopyOnWriteArraySet<OnSheetDismissedListener> onSheetDismissedListeners = new CopyOnWriteArraySet<>();
-    private CopyOnWriteArraySet<OnSheetStateChangeListener> onSheetStateChangeListeners = new CopyOnWriteArraySet<>();
-    private OnLayoutChangeListener sheetViewOnLayoutChangeListener;
-    private View dimView;
-    private boolean interceptContentTouch = true;
-    private int currentSheetViewHeight;
-    private boolean hasIntercepted;
-    private float peek;
-    private AppBarLayout mAppBarLayout;
-    private OnOffsetChangedListener mOnOffsetChangedListener;
-    private int mAppBarLayoutOffset;
-
-
-    /**
-     * Some values we need to manage width on tablets
-     */
-    private int screenWidth = 0;
-    private final boolean isTablet = getResources().getBoolean(R.bool.bottomsheet_is_tablet);
-    private final int defaultSheetWidth = getResources().getDimensionPixelSize(R.dimen.bottomsheet_default_sheet_width);
-    private int sheetStartX = 0;
-    private int sheetEndX = 0;
-
-    /**
-     * Snapshot of the touch's y position on a down event
-     */
-    private float downY;
-
-    /**
-     * Snapshot of the touch's x position on a down event
-     */
-    private float downX;
-
-    /**
-     * Snapshot of the sheet's translation at the time of the last down event
-     */
-    private float downSheetTranslation;
-
-    /**
-     * Snapshot of the sheet's state at the time of the last down event
-     */
-    private State downState;
 
     public BottomSheetLayout(Context context) {
         super(context);

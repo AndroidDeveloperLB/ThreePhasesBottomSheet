@@ -28,7 +28,6 @@ import com.flipboard.bottomsheet.commons.BottomSheetFragment;
 public class MyFragment extends BottomSheetFragment {
     private BottomSheetLayout mBottomSheetLayout;
     private ImageView mBottomSheetBackgroundImageView;
-    //private int mBottomSheetHeight;
     private int mMovingImageviewSize;
     private ImageView mMovingIconImageView;
     private AppBarLayout mAppBarLayout;
@@ -79,6 +78,7 @@ public class MyFragment extends BottomSheetFragment {
         mBottomSheetBackgroundImageView = (ImageView) view.findViewById(R.id.backdrop);
         mBottomSheetBackgroundImageView.setAlpha(0.0f);
         mBottomSheetBackgroundImageView.setY(mMovingImageviewSize / 2);
+
         final Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.background);
         mBottomSheetBackgroundImageView.setImageBitmap(bm);
         mMovingIconImageView = (ImageView) view.findViewById(R.id.movingIconImageView);
@@ -203,7 +203,8 @@ public class MyFragment extends BottomSheetFragment {
                 mMovingIconImageView.setScaleY(scaleForImageView);
                 final float newMovingIconImageViewY = progress * (mBottomSheetHeightExpanded - startMarginBottom - mMovingIconImageView.getHeight() * scaleForImageView);
                 mMovingIconImageView.setY(newMovingIconImageViewY);
-                mBottomSheetBackgroundImageView.setY(mOriginalBottomSheetBackgroundImageViewY * (1 - progress));
+                final float newBottomSheetBackgroundImageContainerY = mOriginalBottomSheetBackgroundImageViewY * (1 - progress);
+                mBottomSheetBackgroundImageView.setY(newBottomSheetBackgroundImageContainerY);
             }
         };
     }
