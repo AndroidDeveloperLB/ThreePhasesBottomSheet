@@ -129,8 +129,4 @@
         android:singleLine="true"
         android:text="Title"
         android:textSize="30dp"/>
-    <!--android:layout_gravity="bottom|left"-->
-    <!--android:layout_marginBottom="@dimen/moving_text_expanded_toolbar_bottom_margin"-->
-    <!--android:layout_marginLeft="@dimen/moving_text_expanded_toolbar_margin_left"-->
-    <!--android:layout_marginRight="@dimen/moving_text_collapsed_toolbar_margin_right"-->
 </FrameLayout>

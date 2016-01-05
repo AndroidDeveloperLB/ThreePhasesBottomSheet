@@ -46,16 +46,21 @@ public class MyFragment2 extends BottomSheetFragment {
         mBottomSheetTopHeader = view.findViewById(R.id.bottomSheetTopHeader);
         mLeftToolbar = (Toolbar) view.findViewById(R.id.toolbar);
 
+
         view.setMinimumHeight(getResources().getDisplayMetrics().heightPixels);
         mBottomSheetHeightExpanded = getResources().getDimensionPixelSize(R.dimen.header_height_expanded);
         mBottomSheetHeightPeeked = getResources().getDimensionPixelSize(R.dimen.header_height_peeked);
-
         mMovingImageviewSize = getResources().getDimensionPixelSize(R.dimen.moving_image_collapsed_bottom_sheet_size);
+
+        //Bitmap thumbBitmap = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeResource(getResources(), R.drawable.background), mMovingImageviewSize, mMovingImageviewSize);
+        //Bitmap blurredThumbBitmap =thumbBitmap;// Utils.blur(getActivity(), thumbBitmap, 4);
+        //ImageView backgroundImageView = (ImageView) view.findViewById(R.id.backdrop);
+        //backgroundImageView.setImageBitmap(blurredThumbBitmap);
+
         mTitleExpanded = (TextView) view.findViewById(R.id.fragment_search_activity_result__expandedTitleTextView);
         mTitleCollapsed = (TextView) view.findViewById(R.id.fragment_search_activity_result__collapsedTitleTextView);
         ((MarginLayoutParams) mBottomSheetTopHeader.getLayoutParams()).height = mBottomSheetHeightPeeked - mMovingImageviewSize / 2;
         ((MarginLayoutParams) mBottomsheetContentView.getLayoutParams()).topMargin = mBottomSheetHeightPeeked;
-
 
         mBottomSheetHeader.setOnClickListener(new OnClickListener() {
             @Override
@@ -233,6 +238,7 @@ public class MyFragment2 extends BottomSheetFragment {
             case HIDDEN_PEEKED:
                 break;
             case PEEKED:
+                mNestedScrollView.scrollTo(0, 0);
                 mBottomSheetTopHeader.animate().cancel();
                 final ViewPropertyAnimator animator = mBottomSheetTopHeader.animate();
                 animator.setDuration(getResources().getInteger(android.R.integer.config_shortAnimTime));

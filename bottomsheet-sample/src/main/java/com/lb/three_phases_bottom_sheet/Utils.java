@@ -2,13 +2,17 @@ package com.lb.three_phases_bottom_sheet;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.support.annotation.FloatRange;
+import android.support.v8.renderscript.Allocation;
+import android.support.v8.renderscript.Element;
+import android.support.v8.renderscript.RenderScript;
+import android.support.v8.renderscript.ScriptIntrinsicBlur;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
-/**
- * Created by user on 14/12/2015.
- */
 public class Utils {
 
     /**
@@ -36,4 +40,30 @@ public class Utils {
         return actionBarHeight;
     }
 
+    public static Bitmap blur(Context context, Bitmap srcBitmap, @FloatRange(from = 0.0f, to = 25.0f) float radius) {
+        if (srcBitmap == null)
+            return null;
+        Bitmap outputBitmap = null;
+        RenderScript rs = null;
+        try {
+            rs = RenderScript.create(context);
+            outputBitmap = Bitmap.createBitmap(srcBitmap.getWidth(), srcBitmap.getHeight(), Bitmap.Config.ARGB_8888);
+            Canvas canvas = new Canvas(outputBitmap);
+            canvas.drawBitmap(srcBitmap, 0, 0, null);
+            Allocation overlayAlloc = Allocation.createFromBitmap(rs, outputBitmap);
+            ScriptIntrinsicBlur blur = ScriptIntrinsicBlur.create(rs, Element.U8_4(rs));
+            blur.setInput(overlayAlloc);
+            blur.setRadius(radius);
+            blur.forEach(overlayAlloc);
+            overlayAlloc.copyTo(outputBitmap);
+            return outputBitmap;
+        } catch (Exception ex) {
+            if (outputBitmap != null)
+                outputBitmap.recycle();
+            return srcBitmap;
+        } finally {
+            if (rs != null)
+                rs.destroy();
+        }
+    }
 }
