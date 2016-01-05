@@ -24,4 +24,4 @@ first method, of using AppBarLayout,CoordinatorLayout , etc :
 - when you press the back button to go from a scrolled expanded bottom sheet state, to the state of peek, it has some weird issues. Need to handle this, or make it work differently. In the sample, I chose to just dismiss the bottom sheet for this case.
 
 Second method, of using just a NestedScrollView :
-- None, except it's quite hard to customize.
+- doesn't snap for scrolling of the bottom sheet, when it's in expanded mode. not an issue, just a missing feature. 
