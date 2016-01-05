@@ -112,7 +112,10 @@ public final class MainActivity extends AppCompatActivity {
                 mBottomSheetLayout.dismissSheet();
                 break;
             case EXPANDED:
-                mBottomSheetLayout.peekSheet();
+                if (useAppBarLayoutMethod)
+                    mBottomSheetLayout.dismissSheet();
+                else
+                    mBottomSheetLayout.peekSheet();
                 break;
         }
     }
