@@ -21,6 +21,7 @@ first method, of using AppBarLayout,CoordinatorLayout , etc :
 -  can have weird issues (like showing in full-screen) in case the keyboard was shown before peeking. This is handled in the sample by just hiding the bottom sheet when the keyboard appears.
 -  for some reason, in the past commits, I've caused a weird bug that doesn't let to scroll to the bottom. It was ok before... Need to investigate it further.
 -  can't handle situations that the bottom sheet is larger in its peeked state, compared to when it's in expanded state.
+- when you press the back button to go from a scrolled expanded bottom sheet state, to the state of peek, it has some weird issues. Need to handle this, or make it work differently. In the sample, I chose to just dismiss the bottom sheet for this case.
 
 Second method, of using just a NestedScrollView :
 - None, except it's quite hard to customize.
