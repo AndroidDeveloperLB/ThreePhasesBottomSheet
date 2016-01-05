@@ -57,8 +57,8 @@ public class MyFragment2 extends BottomSheetFragment {
         //ImageView backgroundImageView = (ImageView) view.findViewById(R.id.backdrop);
         //backgroundImageView.setImageBitmap(blurredThumbBitmap);
 
-        mTitleExpanded = (TextView) view.findViewById(R.id.fragment_search_activity_result__expandedTitleTextView);
-        mTitleCollapsed = (TextView) view.findViewById(R.id.fragment_search_activity_result__collapsedTitleTextView);
+        mTitleExpanded = (TextView) view.findViewById(R.id.expandedTitleTextView);
+        mTitleCollapsed = (TextView) view.findViewById(R.id.collapsedTitleTextView);
         ((MarginLayoutParams) mBottomSheetTopHeader.getLayoutParams()).height = mBottomSheetHeightPeeked - mMovingImageviewSize / 2;
         ((MarginLayoutParams) mBottomsheetContentView.getLayoutParams()).topMargin = mBottomSheetHeightPeeked;
 

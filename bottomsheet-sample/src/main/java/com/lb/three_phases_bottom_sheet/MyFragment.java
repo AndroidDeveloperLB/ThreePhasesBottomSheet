@@ -50,8 +50,8 @@ public class MyFragment extends BottomSheetFragment {
         mBottomSheetHeightExpanded = Math.max(mBottomSheetHeightPeeked, getResources().getDimensionPixelSize(R.dimen.header_height_expanded));
 
         mMovingImageviewSize = getResources().getDimensionPixelSize(R.dimen.moving_image_collapsed_bottom_sheet_size);
-        mTitleExpanded = (TextView) view.findViewById(R.id.fragment_search_activity_result__expandedTitleTextView);
-        mTitleCollapsed = (TextView) view.findViewById(R.id.fragment_search_activity_result__collapsedTitleTextView);
+        mTitleExpanded = (TextView) view.findViewById(R.id.expandedTitleTextView);
+        mTitleCollapsed = (TextView) view.findViewById(R.id.collapsedTitleTextView);
         mBottomSheetContentView = view.findViewById(R.id.bottomsheetContentView);
         ((MarginLayoutParams) mBottomSheetContentView.getLayoutParams()).topMargin = mMovingImageviewSize / 2;
         ((MarginLayoutParams) mBottomSheetContentView.getLayoutParams()).height = mBottomSheetHeightPeeked - mMovingImageviewSize / 2;

@@ -94,7 +94,7 @@
             app:theme="@style/ToolbarColoredBackArrow">
 
             <TextView
-                android:id="@+id/fragment_search_activity_result__collapsedTitleTextView"
+                android:id="@+id/collapsedTitleTextView"
                 style="@style/CollapsedAppBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -122,7 +122,7 @@
         tools:background="#f00"/>
 
     <TextView
-        android:id="@+id/fragment_search_activity_result__expandedTitleTextView"
+        android:id="@+id/expandedTitleTextView"
         style="@style/CollapsedAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
