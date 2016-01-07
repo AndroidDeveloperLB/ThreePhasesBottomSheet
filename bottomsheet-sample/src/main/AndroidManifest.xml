@@ -10,6 +10,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
+            android:configChanges="keyboardHidden"
             android:label="@string/bottomsheet_fragment"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

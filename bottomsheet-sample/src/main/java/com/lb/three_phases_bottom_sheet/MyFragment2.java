@@ -6,8 +6,10 @@ import android.support.v4.widget.NestedScrollView;
 import android.support.v4.widget.NestedScrollView.OnScrollChangeListener;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.MarginLayoutParams;
 import android.view.ViewPropertyAnimator;
@@ -18,6 +20,7 @@ import com.flipboard.bottomsheet.BaseViewTransformer;
 import com.flipboard.bottomsheet.BottomSheetLayout;
 import com.flipboard.bottomsheet.ViewTransformer;
 import com.flipboard.bottomsheet.commons.BottomSheetFragment;
+import com.lb.three_phases_bottom_sheet.Utils.ViewPadding;
 
 public class MyFragment2 extends BottomSheetFragment {
     private BottomSheetLayout mBottomSheetLayout;
@@ -26,13 +29,11 @@ public class MyFragment2 extends BottomSheetFragment {
     private Toolbar mLeftToolbar;
     private TextView mTitleExpanded, mTitleCollapsed;
     private ViewPropertyAnimator mTitleExpandedAnimation, mToolbarAnimation;
-    private View mBottomsheetContentView;
     private int mMovingImageExpandedBottomSheetMarginLeft;
     private int mBottomSheetHeightExpanded, mBottomSheetHeightPeeked;
     private BottomSheetState mBottomSheetState = BottomSheetState.HIDDEN;
     private NestedScrollView mNestedScrollView;
-    private View mBottomSheetHeader;
-    private View mBottomSheetTopHeader;
+    private View mBottomSheetHeader, mBottomSheetTopHeader, mBottomsheetContentView;
 
 
     @Nullable
@@ -45,7 +46,8 @@ public class MyFragment2 extends BottomSheetFragment {
         mMovingIconImageView = (ImageView) view.findViewById(R.id.movingIconImageView);
         mBottomSheetTopHeader = view.findViewById(R.id.bottomSheetTopHeader);
         mLeftToolbar = (Toolbar) view.findViewById(R.id.toolbar);
-
+        mTitleExpanded = (TextView) view.findViewById(R.id.expandedTitleTextView);
+        mTitleCollapsed = (TextView) view.findViewById(R.id.collapsedTitleTextView);
 
         view.setMinimumHeight(getResources().getDisplayMetrics().heightPixels);
         mBottomSheetHeightExpanded = getResources().getDimensionPixelSize(R.dimen.header_height_expanded);
@@ -57,8 +59,6 @@ public class MyFragment2 extends BottomSheetFragment {
         //ImageView backgroundImageView = (ImageView) view.findViewById(R.id.backdrop);
         //backgroundImageView.setImageBitmap(blurredThumbBitmap);
 
-        mTitleExpanded = (TextView) view.findViewById(R.id.expandedTitleTextView);
-        mTitleCollapsed = (TextView) view.findViewById(R.id.collapsedTitleTextView);
         ((MarginLayoutParams) mBottomSheetTopHeader.getLayoutParams()).height = mBottomSheetHeightPeeked - mMovingImageviewSize / 2;
         ((MarginLayoutParams) mBottomsheetContentView.getLayoutParams()).topMargin = mBottomSheetHeightPeeked;
 
@@ -79,7 +79,7 @@ public class MyFragment2 extends BottomSheetFragment {
         mLeftToolbar.setAlpha(0);
         mBottomSheetTopHeader.setAlpha(0.0f);
         mBottomSheetTopHeader.setY(mMovingImageviewSize / 2);
-        mBottomSheetHeader.setPadding(0, mMovingImageviewSize / 2, 0, 0);
+        Utils.setPaddingOrRelativePadding(mBottomSheetHeader, ViewPadding.TOP, mMovingImageviewSize / 2);
 
         final int actionBarHeight = Utils.getActionBarHeight(getActivity());
 
@@ -92,6 +92,7 @@ public class MyFragment2 extends BottomSheetFragment {
         mMovingImageExpandedBottomSheetMarginLeft = getResources().getDimensionPixelSize(R.dimen.moving_image_expanded_bottom_sheet_margin_left);
 
         mNestedScrollView.setOnScrollChangeListener(new OnScrollChangeListener() {
+            final float actionBarIconPadding = getResources().getDimensionPixelSize(R.dimen.moving_image_collapsed_toolbar_top_and_bottom_padding);
             final float actionBarIconPaddingText = getResources().getDimensionPixelSize(R.dimen.moving_text_collapsed_toolbar_top_and_bottom_padding);
             final float startMarginLeftText = getResources().getDimensionPixelSize(R.dimen.moving_text_expanded_toolbar_margin_left);
             boolean init = false;
@@ -102,7 +103,6 @@ public class MyFragment2 extends BottomSheetFragment {
 
             @Override
             public void onScrollChange(final NestedScrollView v, final int scrollX, final int scrollY, final int oldScrollX, final int oldScrollY) {
-
                 float progress = Math.min(1, (float) scrollY / (mBottomSheetHeightExpanded - actionBarHeight));
                 ((MarginLayoutParams) mBottomSheetTopHeader.getLayoutParams()).height = (int) Math.ceil(mBottomSheetHeightExpanded * (1 - progress) + progress * actionBarHeight);
                 mBottomSheetTopHeader.requestLayout();
@@ -117,7 +117,6 @@ public class MyFragment2 extends BottomSheetFragment {
                     final float scaleForImageView = 1 - scaleDiff;
                     startY = mBottomSheetHeightExpanded - startMarginBottom - mMovingIconImageView.getHeight() * scaleForImageView;
                     //
-                    final float actionBarIconPadding = getResources().getDimensionPixelSize(R.dimen.moving_image_collapsed_toolbar_top_and_bottom_padding);
                     final float targetImageViewSize = actionBarHeight - actionBarIconPadding * 2;
                     targetY = actionBarIconPadding;
                     final float targetScale = targetImageViewSize / mMovingImageviewSize;
@@ -238,6 +237,13 @@ public class MyFragment2 extends BottomSheetFragment {
             case HIDDEN_PEEKED:
                 break;
             case PEEKED:
+                mNestedScrollView.setOnTouchListener(new OnTouchListener() {
+                    @Override
+                    public boolean onTouch(final View v, final MotionEvent event) {
+                        //avoid scrolling while the bottom sheet is in peeked state
+                        return true;
+                    }
+                });
                 mNestedScrollView.scrollTo(0, 0);
                 mBottomSheetTopHeader.animate().cancel();
                 final ViewPropertyAnimator animator = mBottomSheetTopHeader.animate();
@@ -251,6 +257,7 @@ public class MyFragment2 extends BottomSheetFragment {
                 mBottomSheetHeader.setVisibility(View.GONE);
                 break;
             case EXPANDED:
+                mNestedScrollView.setOnTouchListener(null);
                 final float startMarginLeftText = getResources().getDimensionPixelSize(R.dimen.moving_text_expanded_toolbar_margin_left);
                 mTitleExpanded.setX(startMarginLeftText);
                 mTitleExpanded.setY(mMovingIconImageView.getY() + mMovingImageviewSize * mMovingIconImageView.getScaleY() / 2 - mTitleExpanded.getHeight() / 2);

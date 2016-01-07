@@ -5,6 +5,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.support.annotation.FloatRange;
+import android.support.v4.view.ViewCompat;
 import android.support.v8.renderscript.Allocation;
 import android.support.v8.renderscript.Element;
 import android.support.v8.renderscript.RenderScript;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
 public class Utils {
+    public enum ViewPadding {START_OR_LEFT, BOTTOM, END_OR_RIGHT, TOP}
 
     /**
      * hides the soft keyboard for the activity , based on the currently focused view
@@ -64,6 +66,26 @@ public class Utils {
         } finally {
             if (rs != null)
                 rs.destroy();
+        }
+    }
+
+    /**
+     * sets a single padding on a view, without changing the rest of the padding values of the view
+     */
+    public static void setPaddingOrRelativePadding(View v, ViewPadding paddingType, int paddingValueToSetInPixels) {
+        switch (paddingType) {
+            case BOTTOM:
+                ViewCompat.setPaddingRelative(v, ViewCompat.getPaddingStart(v), v.getPaddingTop(), ViewCompat.getPaddingEnd(v), paddingValueToSetInPixels);
+                break;
+            case END_OR_RIGHT:
+                ViewCompat.setPaddingRelative(v, ViewCompat.getPaddingStart(v), v.getPaddingTop(), paddingValueToSetInPixels, v.getPaddingBottom());
+                break;
+            case START_OR_LEFT:
+                ViewCompat.setPaddingRelative(v, paddingValueToSetInPixels, v.getPaddingTop(), ViewCompat.getPaddingEnd(v), v.getPaddingBottom());
+                break;
+            case TOP:
+                ViewCompat.setPaddingRelative(v, ViewCompat.getPaddingStart(v), paddingValueToSetInPixels, ViewCompat.getPaddingEnd(v), v.getPaddingBottom());
+                break;
         }
     }
 }
