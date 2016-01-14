@@ -1,47 +1,54 @@
 <com.flipboard.bottomsheet.BottomSheetLayout
-    android:id="@+id/bottomsheet"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/bottomsheet"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp">
+    <android.support.v7.widget.Toolbar
+      android:id="@+id/main_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="?attr/colorPrimary"
+      app:titleTextColor="#fff"/>
 
-        <Button
-            android:id="@+id/bottomsheet_fragment_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp"
-            android:text="method 1 (using AppBarLayout, CoordinatorLayout,...)"/>
+    <Button
+      android:id="@+id/bottomsheet_fragment_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginBottom="16dp"
+      android:text="method 1 (using AppBarLayout, CoordinatorLayout,...)"/>
 
-        <Button
-            android:id="@+id/bottomsheet_fragment_button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp"
-            android:text="method 2 (using just NestedScrollView)"/>
+    <Button
+      android:id="@+id/bottomsheet_fragment_button2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginBottom="16dp"
+      android:text="method 2 (using just NestedScrollView)"/>
 
-        <EditText
-            android:id="@+id/bottomsheet_fragment_editText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:hint="try me while bottom sheet appears"
-            android:imeOptions="actionSearch|flagNoExtractUi"
-            android:singleLine="true"/>
+    <EditText
+      android:id="@+id/bottomsheet_fragment_editText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:focusable="true"
+      android:focusableInTouchMode="true"
+      android:hint="try me while bottom sheet appears"
+      android:imeOptions="actionSearch|flagNoExtractUi"
+      android:singleLine="true"/>
 
-        <View
-            android:id="@+id/focusStealer"
-            android:layout_width="0px"
-            android:layout_height="0px"
-            android:focusable="true"
-            android:focusableInTouchMode="true"/>
+    <View
+      android:id="@+id/focusStealer"
+      android:layout_width="0px"
+      android:layout_height="0px"
+      android:focusable="true"
+      android:focusableInTouchMode="true"/>
 
-    </LinearLayout>
+  </LinearLayout>
 </com.flipboard.bottomsheet.BottomSheetLayout>

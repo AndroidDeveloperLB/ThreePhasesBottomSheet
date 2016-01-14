@@ -96,7 +96,7 @@ public class MyFragment2 extends BottomSheetFragment {
             float startYTitle;
 
             @Override
-            public void onScrollChange(final NestedScrollView v, final int scrollX, final int scrollY, final int oldScrollX, final int oldScrollY) {
+            public void onScrollChange(final NestedScrollView v,final int scrollX,final int scrollY,final int oldScrollX,final int oldScrollY) {
 
                 float progress = Math.min(1, (float) scrollY / (mBottomSheetHeightExpanded - actionBarHeight));
                 ((MarginLayoutParams) mBottomSheetTopHeader.getLayoutParams()).height = (int) Math.ceil(mBottomSheetHeightExpanded * (1 - progress) + progress * actionBarHeight);
@@ -185,7 +185,6 @@ public class MyFragment2 extends BottomSheetFragment {
                     reportState(translation == maxTranslation ? BottomSheetState.EXPANDED : BottomSheetState.PEEKED_EXPANDED);
                 }
                 float progress = (translation - mBottomSheetHeightPeeked) / (maxTranslation - mBottomSheetHeightPeeked);
-                //Log.d("AppLog", "translation:" + translation + " maxTranslation:" + maxTranslation + " progress:" + progress);
                 mMovingIconImageView.setX(mOriginalContactPhotoXCoordinate - progress * (mOriginalContactPhotoXCoordinate - mMovingImageExpandedBottomSheetMarginLeft));
                 final float scaleForImageView = 1 - progress * scaleDiff;
                 mMovingIconImageView.setScaleX(scaleForImageView);
