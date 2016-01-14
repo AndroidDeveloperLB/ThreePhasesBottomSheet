@@ -49,8 +49,8 @@ public class MyFragment extends BottomSheetFragment
     mMovingImageviewSize=getResources().getDimensionPixelSize(R.dimen.moving_image_collapsed_bottom_sheet_size);
     mAppBarLayout=(AppBarLayout)view.findViewById(R.id.appbar);
     mAppBarLayout.getLayoutParams().height=mBottomSheetHeightExpanded;
-    mTitleExpanded=(TextView)view.findViewById(R.id.fragment_search_activity_result__expandedTitleTextView);
-    mTitleCollapsed=(TextView)view.findViewById(R.id.fragment_search_activity_result__collapsedTitleTextView);
+    mTitleExpanded=(TextView)view.findViewById(R.id.expandedTitleTextView);
+    mTitleCollapsed=(TextView)view.findViewById(R.id.collapsedTitleTextView);
 
     mBottomSheetContentView=view.findViewById(R.id.bottomsheetContentView);
     ((MarginLayoutParams)mBottomSheetContentView.getLayoutParams()).topMargin=mMovingImageviewSize/2;
