@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <android.support.v4.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
@@ -94,7 +95,7 @@
             app:theme="@style/ToolbarColoredBackArrow">
 
             <TextView
-                android:id="@+id/fragment_search_activity_result__collapsedTitleTextView"
+                android:id="@+id/collapsedTitleTextView"
                 style="@style/CollapsedAppBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -105,7 +106,6 @@
         </android.support.v7.widget.Toolbar>
 
     </FrameLayout>
-
 
     <com.mikhaellopez.circularimageview.CircularImageView
         android:id="@+id/movingIconImageView"
@@ -122,15 +122,11 @@
         tools:background="#f00"/>
 
     <TextView
-        android:id="@+id/fragment_search_activity_result__expandedTitleTextView"
+        android:id="@+id/expandedTitleTextView"
         style="@style/CollapsedAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:singleLine="true"
         android:text="Title"
         android:textSize="30dp"/>
-    <!--android:layout_gravity="bottom|left"-->
-    <!--android:layout_marginBottom="@dimen/moving_text_expanded_toolbar_bottom_margin"-->
-    <!--android:layout_marginLeft="@dimen/moving_text_expanded_toolbar_margin_left"-->
-    <!--android:layout_marginRight="@dimen/moving_text_collapsed_toolbar_margin_right"-->
 </FrameLayout>
