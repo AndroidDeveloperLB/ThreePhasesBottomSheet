@@ -28,4 +28,5 @@ first method, of using AppBarLayout,CoordinatorLayout , etc :
 Second method, of using just a NestedScrollView :
 
 - doesn't snap for scrolling of the bottom sheet, when it's in expanded mode. not an issue, just a missing feature. 
+- pressing the back button when the bottom sheen is expaneded can cause weird UI issues.
 - might have other issues.
