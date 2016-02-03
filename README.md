@@ -13,6 +13,10 @@ and was asked about on StackOverflow here:
 
 http://stackoverflow.com/q/34160423/878126
 
+It might be possible to use this repository instead of the bottomSheet repo:
+
+https://github.com/umano/AndroidSlidingUpPanel
+
 known issues:
 --
 
